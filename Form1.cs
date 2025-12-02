@@ -69,28 +69,73 @@ namespace Cars
 
         private void lisa_btn_Click(object sender, EventArgs e)
         {
-            var currentTab = tab_control.SelectedTab;
-
-            if (currentTab == omanik_page)
+            if (tab_control.SelectedTab == omanik_page)
             {
                 if (string.IsNullOrWhiteSpace(txt_box_full_name.Text))
                 {
                     MessageBox.Show("Ees- ja perekonnanimi on kohustuslik!");
                     return;
                 }
+                var uus = new Owner
+                {
+                    FullName = txt_box_full_name.Text,
+                    Phone = txt_box_phone.Text,
+                };
+                _db.Owners.Add(uus);
+                _db.SaveChanges();
+                LoeOmanik();
+                puhasta();
             }
-            var uus = new Owner
+        }
+        private void nimi_otsi_btn_Click(object sender, EventArgs e)
+        {
+            if (tab_control.SelectedTab == omanik_page)
             {
-                FullName = txt_box_full_name.Text,
-                Phone = txt_box_phone.Text,
-            };
-            _db.Owners.Add(uus);
-            _db.SaveChanges();
-            LoeOmanik();
+                if (string.IsNullOrWhiteSpace(txt_box_full_name.Text) && string.IsNullOrEmpty(txt_box_phone.Text))
+                {
+                    MessageBox.Show("Sisesta omaniku nimi või telefoninumber!");
+                }
+                else
+                {
+                    var query = _db.Owners.AsQueryable();
+                    if (!string.IsNullOrWhiteSpace(txt_box_full_name.Text))
+                    {
+                        query = query.Where(o => o.FullName.Contains(txt_box_full_name.Text));
+                    }
+                    if (!string.IsNullOrWhiteSpace(txt_box_phone.Text))
+                    {
+                        query = query.Where(o => o.Phone.Contains(txt_box_phone.Text));
+                    }
+                    var tulemused = query
+                        .Select(o => new
+                        {
+                            o.Id,
+                            o.FullName,
+                            o.Phone
+                        })
+                        .ToList();
+
+                    omanik_data.DataSource = tulemused;
+                }
+            }
+        }
+        private void vaate_btn_Click(object sender, EventArgs e)
+        {
+            if (tab_control.SelectedTab == omanik_page)
+            {
+                LoeOmanik();
+            }
+        }
+        private void puhasta()
+        {
+            if (tab_control.SelectedTab == omanik_page)
+                txt_box_full_name.Clear();
+                txt_box_phone.Clear();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }
