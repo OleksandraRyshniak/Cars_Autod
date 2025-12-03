@@ -66,7 +66,6 @@ namespace Cars
             omanik_com_box.DisplayMember = "FullName";
             omanik_com_box.ValueMember = "Id";
         }
-
         private void lisa_btn_Click(object sender, EventArgs e)
         {
             if (tab_control.SelectedTab == omanik_page)
@@ -84,6 +83,25 @@ namespace Cars
                 _db.Owners.Add(uus);
                 _db.SaveChanges();
                 LoeOmanik();
+                puhasta();
+            } 
+            else if (tab_control.SelectedTab == auto_page)
+            {
+                if (string.IsNullOrWhiteSpace(automark_text_box.Text))
+                {
+                    MessageBox.Show("Brand on kohustuslik!");
+                    return;
+                }
+                var uus1 = new Car
+                {
+                    Brand = automark_text_box.Text,
+                    Model = automudel_txt_box.Text,
+                    RegistrationNumber = auto_reg_num_text_box.Text,
+                    OwnerId = (int)omanik_com_box.SelectedValue,
+                };
+                _db.Cars.Add(uus1);
+                _db.SaveChanges();
+                LoeCars();
                 puhasta();
             }
         }
@@ -129,13 +147,81 @@ namespace Cars
         private void puhasta()
         {
             if (tab_control.SelectedTab == omanik_page)
+            {
                 txt_box_full_name.Clear();
                 txt_box_phone.Clear();
+            }
+            else if (tab_control.SelectedTab == auto_page)
+            {
+                automark_text_box.Clear();
+                automudel_txt_box.Clear();
+                auto_reg_num_text_box.Clear();
+            }
+        }
+        private void lisa_hool_btn_Click(object sender, EventArgs e)
+        {
+            Lisa_hoolduse_kirjed hooldus_form = new Lisa_hoolduse_kirjed();
+            hooldus_form.Show();
+        }
+        private void kust__btn_Click(object sender, EventArgs e)
+        {
+            if (tab_control.SelectedTab == omanik_page)
+            {
+                if (omanik_data.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Palun valige kustutatav omanik.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string omanik = omanik_data.SelectedRows[0].Cells["FullName"].Value?.ToString() ?? "valitud toode";
+                DialogResult vastus = MessageBox.Show(
+                    $"Kas olete kindel, et soovite kustutada toote: {omanik}?",
+                    "Kustutamise kinnitus",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (vastus == DialogResult.Yes)
+                {
+                    try
+                    {
+                        int id = (int)omanik_data.SelectedRows[0].Cells["Id"].Value;
+                        var toode = _db.Owners.Find(id);
+
+                        if (toode != null)
+                        {
+                            _db.Owners.Remove(toode);
+                            _db.SaveChanges();
+                            LoeOmanik();
+                            puhasta();
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Kustutamisel tekkis viga: {ex.Message}", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+        private void uuenda_btn_Click(object sender, EventArgs e)
+        {
+            if (tab_control.SelectedTab == omanik_page)
+            {
+                if (omanik_data.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Palun valige kustutatav omanik.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                int id = (int)omanik_data.SelectedRows[0].Cells["Id"].Value;
+                var owner = _db.Owners.Find(id);
+
+                owner.FullName = txt_box_full_name.Text;
+                owner.Phone = txt_box_phone.Text;
+                _db.SaveChanges();
+                LoeOmanik();
+            }
         }
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }
