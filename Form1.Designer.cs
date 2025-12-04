@@ -47,6 +47,7 @@
             automark_lbl = new Label();
             autod_data = new DataGridView();
             hool_teen_page = new TabPage();
+            button1 = new Button();
             lisa_hool_btn = new Button();
             textBox3 = new TextBox();
             auto_lbl = new Label();
@@ -203,7 +204,7 @@
             // omanik_lbl
             // 
             omanik_lbl.AutoSize = true;
-            omanik_lbl.Location = new Point(407, 222);
+            omanik_lbl.Location = new Point(446, 222);
             omanik_lbl.Name = "omanik_lbl";
             omanik_lbl.Size = new Size(49, 15);
             omanik_lbl.TabIndex = 6;
@@ -212,7 +213,7 @@
             // auto_reg_num_lbl
             // 
             auto_reg_num_lbl.AutoSize = true;
-            auto_reg_num_lbl.Location = new Point(407, 185);
+            auto_reg_num_lbl.Location = new Point(446, 185);
             auto_reg_num_lbl.Name = "auto_reg_num_lbl";
             auto_reg_num_lbl.Size = new Size(69, 15);
             auto_reg_num_lbl.TabIndex = 5;
@@ -221,7 +222,7 @@
             // automudel_lbl
             // 
             automudel_lbl.AutoSize = true;
-            automudel_lbl.Location = new Point(407, 146);
+            automudel_lbl.Location = new Point(446, 146);
             automudel_lbl.Name = "automudel_lbl";
             automudel_lbl.Size = new Size(67, 15);
             automudel_lbl.TabIndex = 4;
@@ -238,7 +239,7 @@
             // automark_lbl
             // 
             automark_lbl.AutoSize = true;
-            automark_lbl.Location = new Point(407, 106);
+            automark_lbl.Location = new Point(446, 109);
             automark_lbl.Name = "automark_lbl";
             automark_lbl.Size = new Size(60, 15);
             automark_lbl.TabIndex = 1;
@@ -247,14 +248,15 @@
             // autod_data
             // 
             autod_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            autod_data.Location = new Point(6, 26);
+            autod_data.Location = new Point(6, 27);
             autod_data.Name = "autod_data";
             autod_data.RowHeadersWidth = 51;
-            autod_data.Size = new Size(385, 360);
+            autod_data.Size = new Size(434, 360);
             autod_data.TabIndex = 0;
             // 
             // hool_teen_page
             // 
+            hool_teen_page.Controls.Add(button1);
             hool_teen_page.Controls.Add(lisa_hool_btn);
             hool_teen_page.Controls.Add(textBox3);
             hool_teen_page.Controls.Add(auto_lbl);
@@ -279,6 +281,15 @@
             hool_teen_page.TabIndex = 2;
             hool_teen_page.Text = "Hooldus ja Teenused";
             hool_teen_page.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(181, 53);
+            button1.Name = "button1";
+            button1.Size = new Size(86, 64);
+            button1.TabIndex = 17;
+            button1.Text = "Teenuste register";
+            button1.UseVisualStyleBackColor = true;
             // 
             // lisa_hool_btn
             // 
@@ -547,5 +558,6 @@
         private Button uuenda_btn;
         private Button nimi_otsi_btn;
         private Button vaate_btn;
+        private Button button1;
     }
 }

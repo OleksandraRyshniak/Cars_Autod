@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Internal;
 using System.Runtime.Intrinsics.X86;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Cars
 {
@@ -26,12 +27,10 @@ namespace Cars
                 db.Database.EnsureCreated();
             }
         }
-
         private void LoeOmanik()
         {
             omanik_data.DataSource = _db.Owners.Select(o => new
             {
-                o.Id,
                 o.FullName,
                 o.Phone
             }).ToList();
@@ -46,7 +45,6 @@ namespace Cars
         {
             autod_data.DataSource = _db.Cars.Include(c => c.Owner).Select(c => new
             {
-                c.Id,
                 c.Brand,
                 c.Model,
                 c.RegistrationNumber,
@@ -65,6 +63,7 @@ namespace Cars
             omanik_com_box.DataSource = _db.Owners.ToList();
             omanik_com_box.DisplayMember = "FullName";
             omanik_com_box.ValueMember = "Id";
+            omanik_com_box.SelectedIndex = -1;
         }
         private void lisa_btn_Click(object sender, EventArgs e)
         {
@@ -84,7 +83,7 @@ namespace Cars
                 _db.SaveChanges();
                 LoeOmanik();
                 puhasta();
-            } 
+            }
             else if (tab_control.SelectedTab == auto_page)
             {
                 if (string.IsNullOrWhiteSpace(automark_text_box.Text))
@@ -127,7 +126,6 @@ namespace Cars
                     var tulemused = query
                         .Select(o => new
                         {
-                            o.Id,
                             o.FullName,
                             o.Phone
                         })
@@ -136,12 +134,60 @@ namespace Cars
                     omanik_data.DataSource = tulemused;
                 }
             }
+            else if (tab_control.SelectedTab == auto_page)
+            {
+                if (string.IsNullOrWhiteSpace(automark_text_box.Text) &&
+                    string.IsNullOrEmpty(automudel_txt_box.Text) &&
+                    string.IsNullOrEmpty(auto_reg_num_text_box.Text) &&
+                    string.IsNullOrWhiteSpace(omanik_com_box.Text))
+                {
+                    MessageBox.Show("Sisesta mark või mudel või regnumber või omaniku nimi!");
+                }
+                else
+                {
+                    var query1 = _db.Cars.AsQueryable();
+                    if (!string.IsNullOrWhiteSpace(automark_text_box.Text))
+                    {
+                        query1 = query1.Where(c => c.Brand.Contains(automark_text_box.Text));
+                    }
+                    if (!string.IsNullOrWhiteSpace(automudel_txt_box.Text))
+                    {
+                        query1 = query1.Where(c => c.Model.Contains(automudel_txt_box.Text));
+                    }
+                    if (!string.IsNullOrWhiteSpace(auto_reg_num_text_box.Text))
+                    {
+                        query1 = query1.Where(c => c.RegistrationNumber.Contains(auto_reg_num_text_box.Text));
+                    }
+                    if (!string.IsNullOrWhiteSpace(omanik_com_box.Text))
+                    {
+                        string ownerName = omanik_com_box.Text.Trim();
+
+                        query1 = query1.Where(c => c.Owner.FullName.Contains(ownerName));
+                    }
+                    var tulemused = query1
+                       .Select(c => new
+                       {
+                           c.Brand,
+                           c.Model,
+                           c.RegistrationNumber,
+                           Owner = c.Owner.FullName,
+                           c.OwnerId
+                       })
+                       .ToList();
+
+                    autod_data.DataSource = tulemused;
+                }
+            }
         }
         private void vaate_btn_Click(object sender, EventArgs e)
         {
             if (tab_control.SelectedTab == omanik_page)
             {
                 LoeOmanik();
+            }
+            else if (tab_control.SelectedTab == auto_page)
+            {
+                LoeCars();
             }
         }
         private void puhasta()
@@ -156,6 +202,8 @@ namespace Cars
                 automark_text_box.Clear();
                 automudel_txt_box.Clear();
                 auto_reg_num_text_box.Clear();
+                omanik_com_box.Text = "";         
+                omanik_com_box.SelectedIndex = -1;
             }
         }
         private void lisa_hool_btn_Click(object sender, EventArgs e)
@@ -172,9 +220,9 @@ namespace Cars
                     MessageBox.Show("Palun valige kustutatav omanik.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string omanik = omanik_data.SelectedRows[0].Cells["FullName"].Value?.ToString() ?? "valitud toode";
+                string omanik = omanik_data.SelectedRows[0].Cells["FullName"].Value?.ToString() ?? "valitud omanik";
                 DialogResult vastus = MessageBox.Show(
-                    $"Kas olete kindel, et soovite kustutada toote: {omanik}?",
+                    $"Kas olete kindel, et soovite kustutada: {omanik}?",
                     "Kustutamise kinnitus",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
@@ -183,13 +231,48 @@ namespace Cars
                     try
                     {
                         int id = (int)omanik_data.SelectedRows[0].Cells["Id"].Value;
-                        var toode = _db.Owners.Find(id);
+                        var omanik1 = _db.Owners.Find(id);
 
-                        if (toode != null)
+                        if (omanik1 != null)
                         {
-                            _db.Owners.Remove(toode);
+                            _db.Owners.Remove(omanik1);
                             _db.SaveChanges();
                             LoeOmanik();
+                            puhasta();
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Kustutamisel tekkis viga: {ex.Message}", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            } 
+            else if (tab_control.SelectedTab == auto_page)
+            {
+                if (autod_data.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Palun valige kustutatav auto.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string car = autod_data.SelectedRows[0].Cells["Brand"].Value?.ToString() ?? "valitud auto";
+                DialogResult vastus = MessageBox.Show(
+                    $"Kas olete kindel, et soovite kustutada: {car}?",
+                    "Kustutamise kinnitus",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (vastus == DialogResult.Yes)
+                {
+                    try
+                    {
+                        int id = (int)autod_data.SelectedRows[0].Cells["Id"].Value;
+                        var car1 = _db.Cars.Find(id);
+
+                        if (car1 != null)
+                        {
+                            _db.Cars.Remove(car1);
+                            _db.SaveChanges();
+                            LoeCars();
                             puhasta();
 
                         }
