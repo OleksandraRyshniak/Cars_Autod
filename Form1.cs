@@ -31,9 +31,12 @@ namespace Cars
         {
             omanik_data.DataSource = _db.Owners.Select(o => new
             {
+                o.Id,
                 o.FullName,
                 o.Phone
             }).ToList();
+            if (omanik_data.Columns["Id"] != null)
+                omanik_data.Columns["Id"].Visible = false;
         }
         private void LaeOmanik()
         {
@@ -45,6 +48,7 @@ namespace Cars
         {
             autod_data.DataSource = _db.Cars.Include(c => c.Owner).Select(c => new
             {
+                c.Id,
                 c.Brand,
                 c.Model,
                 c.RegistrationNumber,
@@ -86,23 +90,26 @@ namespace Cars
             }
             else if (tab_control.SelectedTab == auto_page)
             {
-                if (string.IsNullOrWhiteSpace(automark_text_box.Text))
+                if (omanik_com_box.SelectedValue == null)
                 {
-                    MessageBox.Show("Brand on kohustuslik!");
+                    MessageBox.Show("Valige omanik!");
                     return;
                 }
+
                 var uus1 = new Car
                 {
                     Brand = automark_text_box.Text,
                     Model = automudel_txt_box.Text,
                     RegistrationNumber = auto_reg_num_text_box.Text,
-                    OwnerId = (int)omanik_com_box.SelectedValue,
+                    OwnerId = (int)omanik_com_box.SelectedValue
                 };
+
                 _db.Cars.Add(uus1);
                 _db.SaveChanges();
                 LoeCars();
                 puhasta();
             }
+
         }
         private void nimi_otsi_btn_Click(object sender, EventArgs e)
         {
@@ -167,6 +174,7 @@ namespace Cars
                     var tulemused = query1
                        .Select(c => new
                        {
+                           c.Id,
                            c.Brand,
                            c.Model,
                            c.RegistrationNumber,
@@ -202,14 +210,9 @@ namespace Cars
                 automark_text_box.Clear();
                 automudel_txt_box.Clear();
                 auto_reg_num_text_box.Clear();
-                omanik_com_box.Text = "";         
+                omanik_com_box.Text = "";
                 omanik_com_box.SelectedIndex = -1;
             }
-        }
-        private void lisa_hool_btn_Click(object sender, EventArgs e)
-        {
-            Lisa_hoolduse_kirjed hooldus_form = new Lisa_hoolduse_kirjed();
-            hooldus_form.Show();
         }
         private void kust__btn_Click(object sender, EventArgs e)
         {
@@ -247,7 +250,7 @@ namespace Cars
                         MessageBox.Show($"Kustutamisel tekkis viga: {ex.Message}", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            } 
+            }
             else if (tab_control.SelectedTab == auto_page)
             {
                 if (autod_data.SelectedRows.Count == 0)
@@ -301,6 +304,37 @@ namespace Cars
                 _db.SaveChanges();
                 LoeOmanik();
             }
+            else if (tab_control.SelectedTab == auto_page)
+            {
+                if (autod_data.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Palun valige auto!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int id = (int)autod_data.SelectedRows[0].Cells["Id"].Value;
+                var car = _db.Cars.Find(id);
+                car.Brand = automark_text_box.Text;
+                car.Model = automudel_txt_box.Text;
+                car.RegistrationNumber = auto_reg_num_text_box.Text;
+
+                if (omanik_com_box.SelectedValue == null)
+                {
+                    MessageBox.Show("Valige omanik!");
+                    return;
+                }
+
+                car.OwnerId = (int)omanik_com_box.SelectedValue;
+
+                _db.SaveChanges();
+                LoeCars();
+            }
+
+        }
+        private void lisa_teenuste_btn_Click(object sender, EventArgs e)
+        {
+            Teenuste hooldus_form = new Teenuste();
+            hooldus_form.Show();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
