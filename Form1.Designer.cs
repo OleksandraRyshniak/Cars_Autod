@@ -47,8 +47,8 @@
             automark_lbl = new Label();
             autod_data = new DataGridView();
             hool_teen_page = new TabPage();
+            kuup_txt_box = new DateTimePicker();
             button1 = new Button();
-            kuup_txt_box = new TextBox();
             auto_lbl = new Label();
             aeg_txt_box = new TextBox();
             auto_com_box = new ComboBox();
@@ -109,6 +109,7 @@
             txt_box_phone.Name = "txt_box_phone";
             txt_box_phone.Size = new Size(159, 27);
             txt_box_phone.TabIndex = 6;
+            txt_box_phone.TextChanged += txt_box_phone_TextChanged;
             // 
             // phone_lbl
             // 
@@ -139,6 +140,7 @@
             omanik_data.RowHeadersWidth = 51;
             omanik_data.Size = new Size(501, 501);
             omanik_data.TabIndex = 0;
+//            omanik_data.CellClick += omanik_data_CellClick;
             // 
             // txt_box_full_name
             // 
@@ -147,6 +149,7 @@
             txt_box_full_name.Name = "txt_box_full_name";
             txt_box_full_name.Size = new Size(159, 27);
             txt_box_full_name.TabIndex = 4;
+            txt_box_full_name.TextChanged += txt_box_full_name_TextChanged;
             // 
             // lbl_full_name
             // 
@@ -257,11 +260,12 @@
             autod_data.RowHeadersWidth = 51;
             autod_data.Size = new Size(496, 480);
             autod_data.TabIndex = 0;
+           // autod_data.CellClick += autod_data_CellClick;
             // 
             // hool_teen_page
             // 
-            hool_teen_page.Controls.Add(button1);
             hool_teen_page.Controls.Add(kuup_txt_box);
+            hool_teen_page.Controls.Add(button1);
             hool_teen_page.Controls.Add(auto_lbl);
             hool_teen_page.Controls.Add(aeg_txt_box);
             hool_teen_page.Controls.Add(auto_com_box);
@@ -280,6 +284,13 @@
             hool_teen_page.Text = "Hooldus ja Teenused";
             hool_teen_page.UseVisualStyleBackColor = true;
             // 
+            // kuup_txt_box
+            // 
+            kuup_txt_box.Location = new Point(294, 156);
+            kuup_txt_box.Name = "kuup_txt_box";
+            kuup_txt_box.Size = new Size(160, 27);
+            kuup_txt_box.TabIndex = 18;
+            // 
             // button1
             // 
             button1.Location = new Point(546, 8);
@@ -290,14 +301,6 @@
             button1.Text = "Teenuste register";
             button1.UseVisualStyleBackColor = true;
             button1.Click += lisa_teenuste_btn_Click;
-            // 
-            // kuup_txt_box
-            // 
-            kuup_txt_box.Location = new Point(294, 144);
-            kuup_txt_box.Margin = new Padding(3, 4, 3, 4);
-            kuup_txt_box.Name = "kuup_txt_box";
-            kuup_txt_box.Size = new Size(138, 27);
-            kuup_txt_box.TabIndex = 16;
             // 
             // auto_lbl
             // 
@@ -313,7 +316,7 @@
             aeg_txt_box.Location = new Point(294, 197);
             aeg_txt_box.Margin = new Padding(3, 4, 3, 4);
             aeg_txt_box.Name = "aeg_txt_box";
-            aeg_txt_box.Size = new Size(138, 27);
+            aeg_txt_box.Size = new Size(160, 27);
             aeg_txt_box.TabIndex = 14;
             // 
             // auto_com_box
@@ -322,7 +325,7 @@
             auto_com_box.Location = new Point(294, 51);
             auto_com_box.Margin = new Padding(3, 4, 3, 4);
             auto_com_box.Name = "auto_com_box";
-            auto_com_box.Size = new Size(138, 28);
+            auto_com_box.Size = new Size(160, 28);
             auto_com_box.TabIndex = 13;
             // 
             // teenus_com_box
@@ -331,7 +334,7 @@
             teenus_com_box.Location = new Point(294, 99);
             teenus_com_box.Margin = new Padding(3, 4, 3, 4);
             teenus_com_box.Name = "teenus_com_box";
-            teenus_com_box.Size = new Size(138, 28);
+            teenus_com_box.Size = new Size(160, 28);
             teenus_com_box.TabIndex = 12;
             // 
             // mileeg_lbl
@@ -346,7 +349,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 163);
+            label3.Location = new Point(21, 156);
             label3.Name = "label3";
             label3.Size = new Size(121, 20);
             label3.TabIndex = 10;
@@ -380,6 +383,7 @@
             hooldus_data.RowHeadersWidth = 51;
             hooldus_data.Size = new Size(581, 301);
             hooldus_data.TabIndex = 2;
+            //hooldus_data.CellClick += hooldus_data_CellClick;
             // 
             // nimi_otsi_btn
             // 
@@ -504,12 +508,12 @@
         private Label mileeg_lbl;
         private Label label3;
         private Label teenus_lbl;
-        private TextBox kuup_txt_box;
         private Label auto_lbl;
         private Button uuenda_btn;
         private Button nimi_otsi_btn;
         private Button vaate_btn;
         private Button button1;
         private ComboBox keel_com_box;
+        private DateTimePicker kuup_txt_box;
     }
 }

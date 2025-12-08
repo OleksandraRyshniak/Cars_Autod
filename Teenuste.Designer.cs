@@ -50,6 +50,7 @@
             nimi_txt_box.Name = "nimi_txt_box";
             nimi_txt_box.Size = new Size(171, 27);
             nimi_txt_box.TabIndex = 24;
+            nimi_txt_box.TextChanged += nimi_txt_box_TextChanged;
             // 
             // nimi_lbl
             // 
@@ -67,6 +68,7 @@
             hind_txt_box.Name = "hind_txt_box";
             hind_txt_box.Size = new Size(171, 27);
             hind_txt_box.TabIndex = 22;
+            hind_txt_box.TextChanged += hind_txt_box_TextChanged;
             // 
             // hind_lbl
             // 

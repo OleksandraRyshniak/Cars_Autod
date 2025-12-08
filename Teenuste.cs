@@ -149,5 +149,55 @@ namespace Cars
         {
             LoeServices();
         }
+
+        private void nimi_txt_box_TextChanged(object sender, EventArgs e)
+        {
+            var query = _db.Services.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(nimi_txt_box.Text))
+            {
+                query = query.Where(o => o.Name.Contains(nimi_txt_box.Text));
+            }
+            if (!string.IsNullOrWhiteSpace(hind_txt_box.Text) && float.TryParse(hind_txt_box.Text, out float price))
+            {
+                query = query.Where(o => o.Price == price);
+            }
+
+            teenuste_data.DataSource = query
+                .Select(o => new
+                {
+                    o.Id,
+                    o.Name,
+                    o.Price
+                })
+                .ToList();
+
+            teenuste_data.Columns["Id"].Visible = false;
+        }
+
+        private void hind_txt_box_TextChanged(object sender, EventArgs e)
+        {
+            var query = _db.Services.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(nimi_txt_box.Text))
+            {
+                query = query.Where(o => o.Name.Contains(nimi_txt_box.Text));
+            }
+            if (!string.IsNullOrWhiteSpace(hind_txt_box.Text) && float.TryParse(hind_txt_box.Text, out float price))
+            {
+                query = query.Where(o => o.Price == price);
+            }
+
+            teenuste_data.DataSource = query
+                .Select(o => new
+                {
+                    o.Id,
+                    o.Name,
+                    o.Price
+                })
+                .ToList();
+
+            teenuste_data.Columns["Id"].Visible = false;
+        }
     }
 }
