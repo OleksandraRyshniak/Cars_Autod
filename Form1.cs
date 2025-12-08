@@ -20,8 +20,8 @@ namespace Cars
             LaeOmanik();
             LoeCars();
             LaeCars();
-            //LoeServices();
-            //LoeCarServices();
+            LoeCarServices();
+            LaeTeenused();
             using (var db = new CarsContext())
             {
                 db.Database.EnsureCreated();
@@ -60,14 +60,45 @@ namespace Cars
             {
                 autod_data.Columns["OwnerId"].Visible = false;
             }
-
         }
         private void LaeCars()
         {
-            omanik_com_box.DataSource = _db.Owners.ToList();
-            omanik_com_box.DisplayMember = "FullName";
-            omanik_com_box.ValueMember = "Id";
-            omanik_com_box.SelectedIndex = -1;
+            auto_com_box.DataSource = _db.Cars.ToList();
+            auto_com_box.DisplayMember = "RegistrationNumber";
+            auto_com_box.ValueMember = "Id";
+            auto_com_box.SelectedIndex = -1;
+        }
+        private void LoeCarServices()
+        {
+            hooldus_data.DataSource = _db.CarServices
+                .Include(cs => cs.Service)
+                .Include(cs => cs.Car)
+                .Select(cs => new
+                {
+                    Car = cs.Car.RegistrationNumber,
+                    cs.CarId,
+                    Service = cs.Service.Name,
+                    cs.ServiceId,
+                    cs.DateOfService,
+                    cs.Mileage
+                })
+                .ToList();
+            if (hooldus_data.Columns["CarId"] != null)
+            {
+                hooldus_data.Columns["CarId"].Visible = false;
+            }
+            if (hooldus_data.Columns["ServiceId"] != null)
+            {
+                hooldus_data.Columns["ServiceId"].Visible = false;
+            }
+
+        }
+        private void LaeTeenused()
+        {
+            teenus_com_box.DataSource = _db.Services.ToList();
+            teenus_com_box.DisplayMember = "Name";
+            teenus_com_box.ValueMember = "Id";
+            teenus_com_box.SelectedIndex = -1;
         }
         private void lisa_btn_Click(object sender, EventArgs e)
         {
@@ -109,7 +140,35 @@ namespace Cars
                 LoeCars();
                 puhasta();
             }
-
+            else if (tab_control.SelectedTab == hool_teen_page)
+            {
+                if (auto_com_box.SelectedValue == null)
+                {
+                    MessageBox.Show("Valige auto!");
+                    return;
+                }
+                if (teenus_com_box.SelectedValue == null)
+                {
+                    MessageBox.Show("Valige teenus!");
+                    return;
+                }
+                if (!DateTime.TryParse(kuup_txt_box.Text, out DateTime kuup) || !int.TryParse(aeg_txt_box.Text, out int aeg))
+                {
+                    MessageBox.Show("Kuupäev või läbisõit on valesformaadis!");
+                    return;
+                }
+                var uus2 = new CarService
+                {
+                    CarId = (int)auto_com_box.SelectedValue,
+                    ServiceId = (int)teenus_com_box.SelectedValue,
+                    DateOfService = kuup,
+                    Mileage = aeg
+                };
+                _db.CarServices.Add(uus2);
+                _db.SaveChanges();
+                LoeCarServices();
+                puhasta();
+            }
         }
         private void nimi_otsi_btn_Click(object sender, EventArgs e)
         {
@@ -197,6 +256,10 @@ namespace Cars
             {
                 LoeCars();
             }
+            else if (tab_control.SelectedTab == hool_teen_page)
+            {
+                LoeCarServices();
+            }
         }
         private void puhasta()
         {
@@ -212,6 +275,15 @@ namespace Cars
                 auto_reg_num_text_box.Clear();
                 omanik_com_box.Text = "";
                 omanik_com_box.SelectedIndex = -1;
+            }
+            else if (tab_control.SelectedTab == hool_teen_page)
+            {
+                auto_com_box.Text = "";
+                auto_com_box.SelectedIndex = -1;
+                teenus_com_box.Text = "";
+                teenus_com_box.SelectedIndex = -1;
+                kuup_txt_box.Clear();
+                aeg_txt_box.Clear();
             }
         }
         private void kust__btn_Click(object sender, EventArgs e)

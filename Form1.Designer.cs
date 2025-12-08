@@ -48,11 +48,11 @@
             autod_data = new DataGridView();
             hool_teen_page = new TabPage();
             button1 = new Button();
-            textBox3 = new TextBox();
+            kuup_txt_box = new TextBox();
             auto_lbl = new Label();
-            textBox2 = new TextBox();
-            comboBox3 = new ComboBox();
-            comboBox1 = new ComboBox();
+            aeg_txt_box = new TextBox();
+            auto_com_box = new ComboBox();
+            teenus_com_box = new ComboBox();
             mileeg_lbl = new Label();
             label3 = new Label();
             teenus_lbl = new Label();
@@ -261,11 +261,11 @@
             // hool_teen_page
             // 
             hool_teen_page.Controls.Add(button1);
-            hool_teen_page.Controls.Add(textBox3);
+            hool_teen_page.Controls.Add(kuup_txt_box);
             hool_teen_page.Controls.Add(auto_lbl);
-            hool_teen_page.Controls.Add(textBox2);
-            hool_teen_page.Controls.Add(comboBox3);
-            hool_teen_page.Controls.Add(comboBox1);
+            hool_teen_page.Controls.Add(aeg_txt_box);
+            hool_teen_page.Controls.Add(auto_com_box);
+            hool_teen_page.Controls.Add(teenus_com_box);
             hool_teen_page.Controls.Add(mileeg_lbl);
             hool_teen_page.Controls.Add(label3);
             hool_teen_page.Controls.Add(teenus_lbl);
@@ -291,13 +291,13 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += lisa_teenuste_btn_Click;
             // 
-            // textBox3
+            // kuup_txt_box
             // 
-            textBox3.Location = new Point(294, 144);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(138, 27);
-            textBox3.TabIndex = 16;
+            kuup_txt_box.Location = new Point(294, 144);
+            kuup_txt_box.Margin = new Padding(3, 4, 3, 4);
+            kuup_txt_box.Name = "kuup_txt_box";
+            kuup_txt_box.Size = new Size(138, 27);
+            kuup_txt_box.TabIndex = 16;
             // 
             // auto_lbl
             // 
@@ -308,31 +308,31 @@
             auto_lbl.TabIndex = 15;
             auto_lbl.Text = "Auto";
             // 
-            // textBox2
+            // aeg_txt_box
             // 
-            textBox2.Location = new Point(294, 197);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(138, 27);
-            textBox2.TabIndex = 14;
+            aeg_txt_box.Location = new Point(294, 197);
+            aeg_txt_box.Margin = new Padding(3, 4, 3, 4);
+            aeg_txt_box.Name = "aeg_txt_box";
+            aeg_txt_box.Size = new Size(138, 27);
+            aeg_txt_box.TabIndex = 14;
             // 
-            // comboBox3
+            // auto_com_box
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(294, 51);
-            comboBox3.Margin = new Padding(3, 4, 3, 4);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(138, 28);
-            comboBox3.TabIndex = 13;
+            auto_com_box.FormattingEnabled = true;
+            auto_com_box.Location = new Point(294, 51);
+            auto_com_box.Margin = new Padding(3, 4, 3, 4);
+            auto_com_box.Name = "auto_com_box";
+            auto_com_box.Size = new Size(138, 28);
+            auto_com_box.TabIndex = 13;
             // 
-            // comboBox1
+            // teenus_com_box
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(294, 99);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(138, 28);
-            comboBox1.TabIndex = 12;
+            teenus_com_box.FormattingEnabled = true;
+            teenus_com_box.Location = new Point(294, 99);
+            teenus_com_box.Margin = new Padding(3, 4, 3, 4);
+            teenus_com_box.Name = "teenus_com_box";
+            teenus_com_box.Size = new Size(138, 28);
+            teenus_com_box.TabIndex = 12;
             // 
             // mileeg_lbl
             // 
@@ -498,13 +498,13 @@
         private TextBox automark_text_box;
         private DataGridView hooldus_data;
         private Label hooldus_kir_lbl;
-        private TextBox textBox2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox1;
+        private TextBox aeg_txt_box;
+        private ComboBox auto_com_box;
+        private ComboBox teenus_com_box;
         private Label mileeg_lbl;
         private Label label3;
         private Label teenus_lbl;
-        private TextBox textBox3;
+        private TextBox kuup_txt_box;
         private Label auto_lbl;
         private Button uuenda_btn;
         private Button nimi_otsi_btn;
