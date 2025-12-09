@@ -87,6 +87,7 @@ namespace Cars
                 .Include(cs => cs.Car)
                 .Select(cs => new
                 {
+                    cs.Id,
                     Car = cs.Car.RegistrationNumber,
                     cs.CarId,
                     Service = cs.Service.Name,
@@ -95,6 +96,7 @@ namespace Cars
                     cs.Mileage
                 })
                 .ToList();
+            hooldus_data.Columns["Id"].Visible = false;
             if (hooldus_data.Columns["CarId"] != null)
             {
                 hooldus_data.Columns["CarId"].Visible = false;
@@ -453,10 +455,8 @@ namespace Cars
                 {
                     try
                     {
-                        int carid = (int)hooldus_data.SelectedRows[0].Cells["CarId"].Value;
-                        int teenuseidid = (int)hooldus_data.SelectedRows[0].Cells["ServiceId"].Value;
-                        DateTime date = (DateTime)hooldus_data.SelectedRows[0].Cells["DateOfService"].Value;
-                        var car1 = _db.CarServices.Find(carid, teenuseidid, date);
+                        int id = (int)hooldus_data.SelectedRows[0].Cells["Id"].Value;
+                        var car1 = _db.CarServices.Find(id);
 
                         if (car1 != null)
                         {
