@@ -87,7 +87,6 @@ namespace Cars
                 .Include(cs => cs.Car)
                 .Select(cs => new
                 {
-                    cs.Id,
                     Car = cs.Car.RegistrationNumber,
                     cs.CarId,
                     Service = cs.Service.Name,
@@ -96,7 +95,6 @@ namespace Cars
                     cs.Mileage
                 })
                 .ToList();
-            hooldus_data.Columns["Id"].Visible = false;
             if (hooldus_data.Columns["CarId"] != null)
             {
                 hooldus_data.Columns["CarId"].Visible = false;
@@ -455,12 +453,13 @@ namespace Cars
                 {
                     try
                     {
-                        int id = (int)hooldus_data.SelectedRows[0].Cells["Id"].Value;
-                        var car1 = _db.CarServices.Find(id);
-
-                        if (car1 != null)
+                        int oldCarId = (int)hooldus_data.SelectedRows[0].Cells["CarId"].Value;
+                        int oldServiceId = (int)hooldus_data.SelectedRows[0].Cells["ServiceId"].Value;
+                        DateTime oldDate = (DateTime)hooldus_data.SelectedRows[0].Cells["DateOfService"].Value;
+                        var oldEntry = _db.CarServices.Find(oldCarId, oldServiceId, oldDate);
+                        if (oldEntry != null)
                         {
-                            _db.CarServices.Remove(car1);
+                            _db.CarServices.Remove(oldEntry);
                             _db.SaveChanges();
                             LoeCarServices();
                             puhasta();
