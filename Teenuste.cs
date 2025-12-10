@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Cars
 {
@@ -198,6 +199,32 @@ namespace Cars
                 .ToList();
 
             teenuste_data.Columns["Id"].Visible = false;
+        }
+
+        private void otsi_teen_txt_box_TextChanged(object sender, EventArgs e)
+        {
+            var query = _db.Services.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(otsi_teen_txt_box.Text))
+            {
+                query = query.Where(o => o.Name.Contains(otsi_teen_txt_box.Text));
+            }
+
+            teenuste_data.DataSource = query
+                .Select(o => new
+                {
+                    o.Id,
+                    o.Name,
+                    o.Price
+                })
+                .ToList();
+
+            teenuste_data.Columns["Id"].Visible = false;
+        }
+
+        private void koik_btn_Click(object sender, EventArgs e)
+        {
+            LoeServices();
         }
     }
 }

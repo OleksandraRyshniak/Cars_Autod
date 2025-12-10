@@ -24,14 +24,6 @@ namespace Cars
             LaeCars();
             LoeCarServices();
             LaeTeenused();
-            automudel_txt_box.TextChanged += (s, e) => AutoSearch();
-            automudel_txt_box.TextChanged += (s, e) => AutoSearch();
-            auto_reg_num_text_box.TextChanged += (s, e) => AutoSearch();
-            omanik_com_box.TextChanged += (s, e) => AutoSearch();
-            auto_com_box.TextChanged += (s, e) => AutoSearch1();
-            teenus_com_box.TextChanged += (s, e) => AutoSearch1();
-            kuup_txt_box.ValueChanged += (s, e) => AutoSearch1();
-            aeg_txt_box.TextChanged += (s, e) => AutoSearch1();
             using (var db = new CarsContext())
             {
                 db.Database.EnsureCreated();
@@ -577,113 +569,85 @@ namespace Cars
         {
 
         }
-        //private void hooldus_data_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (e.RowIndex >= 0)
-        //    {
-        //        DataGridViewRow row = hooldus_data.Rows[e.RowIndex];
-        //        if (row.Cells["CarId"].Value != null)
-        //        {
-        //            auto_com_box.SelectedValue = Convert.ToInt32(row.Cells["CarId"].Value);
-        //        }
-        //        else
-        //        {
-        //            auto_com_box.SelectedIndex = -1;
-        //        }
-        //        if (row.Cells["ServiceId"].Value != null)
-        //        {
-        //            teenus_com_box.SelectedValue = Convert.ToInt32(row.Cells["ServiceId"].Value);
-        //        }
-        //        else
-        //        {
-        //            teenus_com_box.SelectedIndex = -1;
-        //        }
-        //        if (row.Cells["DateOfService"].Value != null)
-        //        {
-        //            kuup_txt_box.Value = Convert.ToDateTime(row.Cells["DateOfService"].Value);
-        //        }
-        //        else
-        //        {
-        //            kuup_txt_box.Value = DateTime.Now;
-        //        }
-        //        aeg_txt_box.Text = row.Cells["Mileage"].Value?.ToString() ?? "";
-        //    }
-        //}
-        //private void autod_data_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (e.RowIndex >= 0)
-        //    {  
-        //        DataGridViewRow row = autod_data.Rows[e.RowIndex];
-
-
-        //        automark_text_box.Text = row.Cells["Brand"].Value?.ToString() ?? "";
-        //        automudel_txt_box.Text = row.Cells["Model"].Value?.ToString() ?? "";
-        //        auto_reg_num_text_box.Text = row.Cells["RegistrationNumber"].Value?.ToString() ?? "";
-        //        if (row.Cells["OwnerId"].Value != null)
-        //        {
-        //            omanik_com_box.SelectedValue = Convert.ToInt32(row.Cells["OwnerId"].Value);
-        //        }
-        //        else
-        //        {
-        //            omanik_com_box.SelectedIndex = -1;
-        //        }
-        //        if (int.TryParse(row.Cells["Id"]?.Value?.ToString(), out int id))
-        //        {
-        //            auto_com_box.SelectedValue = id;
-        //        }
-        //        else
-        //        {
-        //            auto_com_box.SelectedIndex = -1;
-        //        }
-        //    }
-
-        //}
-        //private void omanik_data_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (e.RowIndex >= 0)
-        //    {
-        //        DataGridViewRow row = omanik_data.Rows[e.RowIndex];
-        //        txt_box_full_name.Text = row.Cells["FullName"].Value?.ToString() ?? "";
-        //        if (row.Cells["Phone"] != null)
-        //            txt_box_phone.Text = row.Cells["Phone"].Value?.ToString() ?? "";
-        //        else
-        //            txt_box_phone.Text = "";
-        //    }
-        //}
-        private void txt_box_full_name_TextChanged(object sender, EventArgs e)
+        private void hooldus_data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var query = _db.Owners.AsQueryable();
-
-            if (!string.IsNullOrWhiteSpace(txt_box_full_name.Text))
+            if (e.RowIndex >= 0)
             {
-                query = query.Where(o => o.FullName.Contains(txt_box_full_name.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(txt_box_phone.Text))
-            {
-                query = query.Where(o => o.Phone.Contains(txt_box_phone.Text));
-            }
-
-            omanik_data.DataSource = query
-                .Select(o => new
+                DataGridViewRow row = hooldus_data.Rows[e.RowIndex];
+                if (row.Cells["CarId"].Value != null)
                 {
-                    o.Id,
-                    o.FullName,
-                    o.Phone
-                })
-                .ToList();
-
-            omanik_data.Columns["Id"].Visible = false;
+                    auto_com_box.SelectedValue = Convert.ToInt32(row.Cells["CarId"].Value);
+                }
+                else
+                {
+                    auto_com_box.SelectedIndex = -1;
+                }
+                if (row.Cells["ServiceId"].Value != null)
+                {
+                    teenus_com_box.SelectedValue = Convert.ToInt32(row.Cells["ServiceId"].Value);
+                }
+                else
+                {
+                    teenus_com_box.SelectedIndex = -1;
+                }
+                if (row.Cells["DateOfService"].Value != null)
+                {
+                    kuup_txt_box.Value = Convert.ToDateTime(row.Cells["DateOfService"].Value);
+                }
+                else
+                {
+                    kuup_txt_box.Value = DateTime.Now;
+                }
+                aeg_txt_box.Text = row.Cells["Mileage"].Value?.ToString() ?? "";
+            }
         }
-        private void txt_box_phone_TextChanged(object sender, EventArgs e)
+        private void autod_data_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = autod_data.Rows[e.RowIndex];
+
+
+                automark_text_box.Text = row.Cells["Brand"].Value?.ToString() ?? "";
+                automudel_txt_box.Text = row.Cells["Model"].Value?.ToString() ?? "";
+                auto_reg_num_text_box.Text = row.Cells["RegistrationNumber"].Value?.ToString() ?? "";
+                if (row.Cells["OwnerId"].Value != null)
+                {
+                    omanik_com_box.SelectedValue = Convert.ToInt32(row.Cells["OwnerId"].Value);
+                }
+                else
+                {
+                    omanik_com_box.SelectedIndex = -1;
+                }
+                if (int.TryParse(row.Cells["Id"]?.Value?.ToString(), out int id))
+                {
+                    auto_com_box.SelectedValue = id;
+                }
+                else
+                {
+                    auto_com_box.SelectedIndex = -1;
+                }
+            }
+
+        }
+        private void omanik_data_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = omanik_data.Rows[e.RowIndex];
+                txt_box_full_name.Text = row.Cells["FullName"].Value?.ToString() ?? "";
+                if (row.Cells["Phone"] != null)
+                    txt_box_phone.Text = row.Cells["Phone"].Value?.ToString() ?? "";
+                else
+                    txt_box_phone.Text = "";
+            }
+        }
+        private void otsi_tel_txt_box_TextChanged(object sender, EventArgs e)
         {
             var query = _db.Owners.AsQueryable();
-            if (!string.IsNullOrWhiteSpace(txt_box_full_name.Text))
+            if (!string.IsNullOrWhiteSpace(otsi_tel_txt_box.Text))
             {
-                query = query.Where(o => o.FullName.Contains(txt_box_full_name.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(txt_box_phone.Text))
-            {
-                query = query.Where(o => o.Phone.Contains(txt_box_phone.Text));
+                query = query.Where(o => o.Phone.Contains(otsi_tel_txt_box.Text));
             }
             omanik_data.DataSource = query
                 .Select(o => new
@@ -695,21 +659,21 @@ namespace Cars
                 .ToList();
             omanik_data.Columns["Id"].Visible = false;
         }
-        private void AutoSearch()
+        private void tab_control_Click(object sender, EventArgs e)
+        {
+            LoeOmanik();
+            LoeCarServices();
+            LoeCar();
+            LaeCars();
+            LaeOmanik();
+            LaeTeenused();
+        }
+        private void otsi_regnum_txt_box_TextChanged(object sender, EventArgs e)
         {
             var q = _db.Cars.Include(c => c.Owner).AsQueryable();
 
-            if (!string.IsNullOrWhiteSpace(automark_text_box.Text))
-                q = q.Where(c => c.Brand.Contains(automark_text_box.Text));
-
-            if (!string.IsNullOrWhiteSpace(automudel_txt_box.Text))
-                q = q.Where(c => c.Model.Contains(automudel_txt_box.Text));
-
-            if (!string.IsNullOrWhiteSpace(auto_reg_num_text_box.Text))
-                q = q.Where(c => c.RegistrationNumber.Contains(auto_reg_num_text_box.Text));
-
-            if (!string.IsNullOrWhiteSpace(omanik_com_box.Text))
-                q = q.Where(c => c.Owner.FullName.Contains(omanik_com_box.Text));
+            if (!string.IsNullOrWhiteSpace(otsi_regnum_txt_box.Text))
+                q = q.Where(c => c.RegistrationNumber.Contains(otsi_regnum_txt_box.Text));
 
             autod_data.DataSource = q
                 .Select(c => new
@@ -726,38 +690,15 @@ namespace Cars
             autod_data.Columns["Id"].Visible = false;
             autod_data.Columns["OwnerId"].Visible = false;
         }
-        private void AutoSearch1()
+        private void otsi_reg_txt_box_TextChanged(object sender, EventArgs e)
         {
             var q = _db.CarServices
                 .Include(c => c.Car)
                 .Include(c => c.Service)
                 .AsQueryable();
 
-            // ??????????: ?????? ?? ????
-            if (!string.IsNullOrWhiteSpace(auto_com_box.Text))
-                q = q.Where(cs => cs.Car.RegistrationNumber.Contains(auto_com_box.Text));
-
-            // ?????? ?? ??????
-            if (!string.IsNullOrWhiteSpace(teenus_com_box.Text))
-                q = q.Where(cs => cs.Service.Name.Contains(teenus_com_box.Text));
-
-            // ?????? ?? ????
-            DateTime searchDate;
-            if (DateTime.TryParse(kuup_txt_box.Text, out searchDate))
-                q = q.Where(cs => cs.DateOfService == searchDate);
-
-            // ?????? ?? ???????
-            if (!string.IsNullOrWhiteSpace(aeg_txt_box.Text))
-            {
-                if (int.TryParse(aeg_txt_box.Text, out int mileage))
-                    q = q.Where(cs => cs.Mileage == mileage);
-                else
-                {
-                    MessageBox.Show("Läbisõit peab olema arv!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-
+            if (!string.IsNullOrWhiteSpace(otsi_reg_txt_box.Text))
+                q = q.Where(cs => cs.Car.RegistrationNumber.Contains(otsi_reg_txt_box.Text));
             hooldus_data.DataSource = q
                 .Select(c => new
                 {
@@ -770,7 +711,5 @@ namespace Cars
                 })
                 .ToList();
         }
-
-
     }
 }
