@@ -113,6 +113,13 @@ namespace Cars
                     MessageBox.Show("Ees- ja perekonnanimi on kohustuslik!");
                     return;
                 }
+                var phoneExists = _db.Owners.Any(o => o.Phone == txt_box_phone.Text);
+                if (phoneExists)
+                {
+                    MessageBox.Show("Selline telefoninumber on juba olemas!"); 
+                    return;
+                }
+
                 var uus = new Owner
                 {
                     FullName = txt_box_full_name.Text,
@@ -122,6 +129,7 @@ namespace Cars
                 _db.SaveChanges();
                 LoeOmanik();
                 puhasta();
+
             }
             else if (tab_control.SelectedTab == auto_page)
             {
@@ -130,7 +138,12 @@ namespace Cars
                     MessageBox.Show("Valige omanik!");
                     return;
                 }
-
+                var regnumExists = _db.Cars.Any(o => o.RegistrationNumber == auto_reg_num_text_box.Text);
+                if (regnumExists)
+                {
+                    MessageBox.Show("Selline regnumber on juba olemas!");
+                    return;
+                }
                 var uus1 = new Car
                 {
                     Brand = automark_text_box.Text,
@@ -156,22 +169,50 @@ namespace Cars
                     MessageBox.Show("Valige teenus!");
                     return;
                 }
-                if (!DateTime.TryParse(kuup_txt_box.Text, out DateTime kuup) || !int.TryParse(aeg_txt_box.Text, out int aeg))
+                if (!DateTime.TryParse(kuup_txt_box.Text, out DateTime kuup) ||
+                    !DateTime.TryParse(time_txt_box.Text, out DateTime time) ||
+                    !int.TryParse(aeg_txt_box.Text, out int mileage))
                 {
-                    MessageBox.Show("Kuupäev või läbisõit on valesformaadis!");
+                    MessageBox.Show("Kuupäev või aeg või läbisõit on valesformaadis!");
                     return;
                 }
+
+                var dateTimeOfService = new DateTime(
+                    kuup.Year,
+                    kuup.Month,
+                    kuup.Day,
+                    time.Hour,
+                    time.Minute,
+                    0
+                );
+
+                var selectedCarId = (int)auto_com_box.SelectedValue;
+                var selectedDate = kuup.Date;
+
+                var dateExists = _db.CarServices.Any(cs =>
+                    cs.CarId == selectedCarId &&
+                    cs.DateOfService >= selectedDate &&
+                    cs.DateOfService < selectedDate.AddDays(1));
+
+                if (dateExists)
+                {
+                    MessageBox.Show("Sellele kuupäevale on juba teenus olemas!");
+                    return;
+                }
+
                 var uus2 = new CarService
                 {
-                    CarId = (int)auto_com_box.SelectedValue,
+                    CarId = selectedCarId,
                     ServiceId = (int)teenus_com_box.SelectedValue,
-                    DateOfService = kuup,
-                    Mileage = aeg
+                    DateOfService = dateTimeOfService,
+                    Mileage = mileage
                 };
+
                 _db.CarServices.Add(uus2);
                 _db.SaveChanges();
                 LoeCarServices();
                 puhasta();
+
             }
         }
         private void nimi_otsi_btn_Click(object sender, EventArgs e)

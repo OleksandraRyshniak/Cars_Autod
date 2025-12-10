@@ -51,7 +51,11 @@
             automark_lbl = new Label();
             autod_data = new DataGridView();
             hool_teen_page = new TabPage();
+            label2 = new Label();
+            time_txt_box = new DateTimePicker();
             kuup_txt_box = new DateTimePicker();
+            otsi_reg_txt_box = new TextBox();
+            otsi_reg_lbl = new Label();
             button1 = new Button();
             auto_lbl = new Label();
             aeg_txt_box = new TextBox();
@@ -67,8 +71,6 @@
             uuenda_btn = new Button();
             vaate_btn = new Button();
             keel_com_box = new ComboBox();
-            otsi_reg_lbl = new Label();
-            otsi_reg_txt_box = new TextBox();
             tab_control.SuspendLayout();
             omanik_page.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)omanik_data).BeginInit();
@@ -297,9 +299,11 @@
             // 
             // hool_teen_page
             // 
+            hool_teen_page.Controls.Add(label2);
+            hool_teen_page.Controls.Add(time_txt_box);
+            hool_teen_page.Controls.Add(kuup_txt_box);
             hool_teen_page.Controls.Add(otsi_reg_txt_box);
             hool_teen_page.Controls.Add(otsi_reg_lbl);
-            hool_teen_page.Controls.Add(kuup_txt_box);
             hool_teen_page.Controls.Add(button1);
             hool_teen_page.Controls.Add(auto_lbl);
             hool_teen_page.Controls.Add(aeg_txt_box);
@@ -318,13 +322,49 @@
             hool_teen_page.Text = "Hooldus ja Teenused";
             hool_teen_page.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(18, 124);
+            label2.Name = "label2";
+            label2.Size = new Size(72, 15);
+            label2.TabIndex = 23;
+            label2.Text = "Teenuse aeg";
+            // 
+            // time_txt_box
+            // 
+            time_txt_box.CustomFormat = "HH : mm";
+            time_txt_box.Format = DateTimePickerFormat.Custom;
+            time_txt_box.Location = new Point(257, 124);
+            time_txt_box.Name = "time_txt_box";
+            time_txt_box.ShowUpDown = true;
+            time_txt_box.Size = new Size(140, 23);
+            time_txt_box.TabIndex = 22;
+            time_txt_box.Value = new DateTime(2025, 12, 10, 12, 0, 0, 0);
+            // 
             // kuup_txt_box
             // 
-            kuup_txt_box.Location = new Point(257, 117);
-            kuup_txt_box.Margin = new Padding(3, 2, 3, 2);
+            kuup_txt_box.Location = new Point(257, 95);
             kuup_txt_box.Name = "kuup_txt_box";
             kuup_txt_box.Size = new Size(140, 23);
-            kuup_txt_box.TabIndex = 18;
+            kuup_txt_box.TabIndex = 21;
+            // 
+            // otsi_reg_txt_box
+            // 
+            otsi_reg_txt_box.Location = new Point(478, 115);
+            otsi_reg_txt_box.Name = "otsi_reg_txt_box";
+            otsi_reg_txt_box.Size = new Size(140, 23);
+            otsi_reg_txt_box.TabIndex = 20;
+            otsi_reg_txt_box.TextChanged += otsi_reg_txt_box_TextChanged;
+            // 
+            // otsi_reg_lbl
+            // 
+            otsi_reg_lbl.AutoSize = true;
+            otsi_reg_lbl.Location = new Point(478, 94);
+            otsi_reg_lbl.Name = "otsi_reg_lbl";
+            otsi_reg_lbl.Size = new Size(126, 15);
+            otsi_reg_lbl.TabIndex = 19;
+            otsi_reg_lbl.Text = "Otsida regnumbri järgi";
             // 
             // button1
             // 
@@ -339,7 +379,7 @@
             // auto_lbl
             // 
             auto_lbl.AutoSize = true;
-            auto_lbl.Location = new Point(18, 38);
+            auto_lbl.Location = new Point(18, 28);
             auto_lbl.Name = "auto_lbl";
             auto_lbl.Size = new Size(33, 15);
             auto_lbl.TabIndex = 15;
@@ -347,7 +387,7 @@
             // 
             // aeg_txt_box
             // 
-            aeg_txt_box.Location = new Point(257, 148);
+            aeg_txt_box.Location = new Point(257, 158);
             aeg_txt_box.Name = "aeg_txt_box";
             aeg_txt_box.Size = new Size(140, 23);
             aeg_txt_box.TabIndex = 14;
@@ -355,7 +395,7 @@
             // auto_com_box
             // 
             auto_com_box.FormattingEnabled = true;
-            auto_com_box.Location = new Point(257, 38);
+            auto_com_box.Location = new Point(257, 28);
             auto_com_box.Name = "auto_com_box";
             auto_com_box.Size = new Size(140, 23);
             auto_com_box.TabIndex = 13;
@@ -363,7 +403,7 @@
             // teenus_com_box
             // 
             teenus_com_box.FormattingEnabled = true;
-            teenus_com_box.Location = new Point(257, 74);
+            teenus_com_box.Location = new Point(257, 62);
             teenus_com_box.Name = "teenus_com_box";
             teenus_com_box.Size = new Size(140, 23);
             teenus_com_box.TabIndex = 12;
@@ -371,7 +411,7 @@
             // mileeg_lbl
             // 
             mileeg_lbl.AutoSize = true;
-            mileeg_lbl.Location = new Point(18, 150);
+            mileeg_lbl.Location = new Point(18, 158);
             mileeg_lbl.Name = "mileeg_lbl";
             mileeg_lbl.Size = new Size(49, 15);
             mileeg_lbl.TabIndex = 11;
@@ -380,7 +420,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(18, 117);
+            label3.Location = new Point(18, 95);
             label3.Name = "label3";
             label3.Size = new Size(98, 15);
             label3.TabIndex = 10;
@@ -389,7 +429,7 @@
             // teenus_lbl
             // 
             teenus_lbl.AutoSize = true;
-            teenus_lbl.Location = new Point(18, 80);
+            teenus_lbl.Location = new Point(18, 65);
             teenus_lbl.Name = "teenus_lbl";
             teenus_lbl.Size = new Size(44, 15);
             teenus_lbl.TabIndex = 9;
@@ -408,10 +448,10 @@
             // 
             hooldus_data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             hooldus_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            hooldus_data.Location = new Point(5, 180);
+            hooldus_data.Location = new Point(5, 200);
             hooldus_data.Name = "hooldus_data";
             hooldus_data.RowHeadersWidth = 51;
-            hooldus_data.Size = new Size(508, 226);
+            hooldus_data.Size = new Size(508, 206);
             hooldus_data.TabIndex = 2;
             hooldus_data.CellClick += hooldus_data_CellClick;
             // 
@@ -463,23 +503,6 @@
             keel_com_box.Name = "keel_com_box";
             keel_com_box.Size = new Size(117, 23);
             keel_com_box.TabIndex = 10;
-            // 
-            // otsi_reg_lbl
-            // 
-            otsi_reg_lbl.AutoSize = true;
-            otsi_reg_lbl.Location = new Point(478, 94);
-            otsi_reg_lbl.Name = "otsi_reg_lbl";
-            otsi_reg_lbl.Size = new Size(126, 15);
-            otsi_reg_lbl.TabIndex = 19;
-            otsi_reg_lbl.Text = "Otsida regnumbri järgi";
-            // 
-            // otsi_reg_txt_box
-            // 
-            otsi_reg_txt_box.Location = new Point(478, 115);
-            otsi_reg_txt_box.Name = "otsi_reg_txt_box";
-            otsi_reg_txt_box.Size = new Size(140, 23);
-            otsi_reg_txt_box.TabIndex = 20;
-            otsi_reg_txt_box.TextChanged += otsi_reg_txt_box_TextChanged;
             // 
             // Form1
             // 
@@ -544,12 +567,14 @@
         private Button vaate_btn;
         private Button button1;
         private ComboBox keel_com_box;
-        private DateTimePicker kuup_txt_box;
         private TextBox otsi_tel_txt_box;
         private Label otsi_tel_lbl;
         private Label otsi_regnum_lbl;
         private TextBox otsi_regnum_txt_box;
         private Label otsi_reg_lbl;
         private TextBox otsi_reg_txt_box;
+        private Label label2;
+        private DateTimePicker time_txt_box;
+        private DateTimePicker kuup_txt_box;
     }
 }
