@@ -43,6 +43,12 @@ namespace Cars
                 MessageBox.Show("Nimi ja Hind on kohustuslik!");
                 return;
             }
+            var teen = _db.Services.Any(o => o.Name == nimi_txt_box.Text);
+            if (teen)
+            {
+                MessageBox.Show("See teenus on juba olemas.");
+                return;
+            }
             if (!float.TryParse(hind_txt_box.Text, out float price))
             {
                 MessageBox.Show("Hind peab olema arv!");
@@ -118,87 +124,10 @@ namespace Cars
             _db.SaveChanges();
             LoeServices();
         }
-        private void otsi_btn_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(nimi_txt_box.Text) && string.IsNullOrEmpty(hind_txt_box.Text))
-            {
-                MessageBox.Show("Sisesta teenuste nimi või hind!");
-            }
-            else
-            {
-                var query = _db.Services.AsQueryable();
-                if (!string.IsNullOrWhiteSpace(nimi_txt_box.Text))
-                {
-                    query = query.Where(o => o.Name.Contains(nimi_txt_box.Text));
-                }
-                if (!string.IsNullOrWhiteSpace(hind_txt_box.Text) && float.TryParse(hind_txt_box.Text, out float price))
-                {
-                    query = query.Where(o => o.Price == price);
-                }
-                var tulemused = query
-                    .Select(o => new
-                    {
-                        o.Name,
-                        o.Price
-                    })
-                    .ToList();
-
-                teenuste_data.DataSource = tulemused;
-            }
-        }
         private void vaate_btn_Click(object sender, EventArgs e)
         {
             LoeServices();
-        }
-
-        private void nimi_txt_box_TextChanged(object sender, EventArgs e)
-        {
-            var query = _db.Services.AsQueryable();
-
-            if (!string.IsNullOrWhiteSpace(nimi_txt_box.Text))
-            {
-                query = query.Where(o => o.Name.Contains(nimi_txt_box.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(hind_txt_box.Text) && float.TryParse(hind_txt_box.Text, out float price))
-            {
-                query = query.Where(o => o.Price == price);
-            }
-
-            teenuste_data.DataSource = query
-                .Select(o => new
-                {
-                    o.Id,
-                    o.Name,
-                    o.Price
-                })
-                .ToList();
-
-            teenuste_data.Columns["Id"].Visible = false;
-        }
-
-        private void hind_txt_box_TextChanged(object sender, EventArgs e)
-        {
-            var query = _db.Services.AsQueryable();
-
-            if (!string.IsNullOrWhiteSpace(nimi_txt_box.Text))
-            {
-                query = query.Where(o => o.Name.Contains(nimi_txt_box.Text));
-            }
-            if (!string.IsNullOrWhiteSpace(hind_txt_box.Text) && float.TryParse(hind_txt_box.Text, out float price))
-            {
-                query = query.Where(o => o.Price == price);
-            }
-
-            teenuste_data.DataSource = query
-                .Select(o => new
-                {
-                    o.Id,
-                    o.Name,
-                    o.Price
-                })
-                .ToList();
-
-            teenuste_data.Columns["Id"].Visible = false;
+            puhasta();
         }
 
         private void otsi_teen_txt_box_TextChanged(object sender, EventArgs e)
@@ -225,6 +154,18 @@ namespace Cars
         private void koik_btn_Click(object sender, EventArgs e)
         {
             LoeServices();
+        }
+
+        private void teenuste_data_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = teenuste_data.Rows[e.RowIndex];
+
+                nimi_txt_box.Text = row.Cells["Name"].Value?.ToString() ?? "";
+                hind_txt_box.Text = row.Cells["Price"].Value?.ToString() ?? "";
+
+            }
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Cars
         public Form1()
         {
             InitializeComponent();
+
             _db = new CarsContext();
             LoeOmanik();
             LaeOmanik();
@@ -39,6 +40,40 @@ namespace Cars
             }).ToList();
             if (omanik_data.Columns["Id"] != null)
                 omanik_data.Columns["Id"].Visible = false;
+        }
+        private void kuup_ValueChanged(object sender, EventArgs e)
+        {
+            var selectedDate = kuup_txt_box.Value.Date;
+            var today = DateTime.Today;
+
+            if (selectedDate == today)
+            {
+                var now = DateTime.Now;
+                var nextHour = now.AddHours(1);
+                var rounded = new DateTime(
+                    selectedDate.Year,
+                    selectedDate.Month,
+                    selectedDate.Day,
+                    nextHour.Hour,
+                    0,
+                    0
+                );
+
+                time_txt_box.Value = rounded;
+                time_txt_box.MinDate = rounded;
+            }
+            else
+            {
+                var eightAm = new DateTime(
+                    selectedDate.Year,
+                    selectedDate.Month,
+                    selectedDate.Day,
+                    8, 0, 0
+                );
+
+                time_txt_box.Value = eightAm;
+                time_txt_box.MinDate = eightAm;
+            }
         }
         private void LaeOmanik()
         {
@@ -186,23 +221,23 @@ namespace Cars
                     0
                 );
 
-                var selectedCarId = (int)auto_com_box.SelectedValue;
-                var selectedDate = kuup.Date;
+                var selectedServiceId = (int)teenus_com_box.SelectedValue;
 
                 var dateExists = _db.CarServices.Any(cs =>
-                    cs.CarId == selectedCarId &&
-                    cs.DateOfService >= selectedDate &&
-                    cs.DateOfService < selectedDate.AddDays(1));
+                    cs.DateOfService == dateTimeOfService &&
+                    cs.ServiceId == selectedServiceId);
 
                 if (dateExists)
                 {
-                    MessageBox.Show("Sellele kuupäevale on juba teenus olemas!");
+                    MessageBox.Show("Selle teenuse jaoks on see aeg juba kinni!");
                     return;
                 }
 
+
+
                 var uus2 = new CarService
                 {
-                    CarId = selectedCarId,
+                    CarId = (int)auto_com_box.SelectedValue,
                     ServiceId = (int)teenus_com_box.SelectedValue,
                     DateOfService = dateTimeOfService,
                     Mileage = mileage
@@ -394,6 +429,7 @@ namespace Cars
                 teenus_com_box.Text = "";
                 teenus_com_box.SelectedIndex = -1;
                 kuup_txt_box.Value = DateTime.Now;
+                time_txt_box.Value = DateTime.Parse("12:00");
                 aeg_txt_box.Clear();
             }
         }

@@ -340,7 +340,7 @@
             time_txt_box.ShowUpDown = true;
             time_txt_box.Size = new Size(140, 23);
             time_txt_box.TabIndex = 22;
-            time_txt_box.Value = new DateTime(2025, 12, 10, 12, 0, 0, 0);
+            time_txt_box.MinDate = DateTime.Now;
             // 
             // kuup_txt_box
             // 
@@ -348,6 +348,8 @@
             kuup_txt_box.Name = "kuup_txt_box";
             kuup_txt_box.Size = new Size(140, 23);
             kuup_txt_box.TabIndex = 21;
+            kuup_txt_box.MinDate = DateTime.Now;
+            kuup_txt_box.ValueChanged += kuup_ValueChanged;
             // 
             // otsi_reg_txt_box
             // 
