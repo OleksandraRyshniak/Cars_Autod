@@ -340,16 +340,16 @@
             time_txt_box.ShowUpDown = true;
             time_txt_box.Size = new Size(140, 23);
             time_txt_box.TabIndex = 22;
-            time_txt_box.MinDate = DateTime.Now;
+            time_txt_box.Value = new DateTime(2025, 12, 11, 12, 0, 0, 0);
             // 
             // kuup_txt_box
             // 
             kuup_txt_box.Location = new Point(257, 95);
+            kuup_txt_box.MinDate = new DateTime(2025, 12, 11, 13, 15, 38, 541);
             kuup_txt_box.Name = "kuup_txt_box";
             kuup_txt_box.Size = new Size(140, 23);
             kuup_txt_box.TabIndex = 21;
-            kuup_txt_box.MinDate = DateTime.Now;
-            kuup_txt_box.ValueChanged += kuup_ValueChanged;
+            kuup_txt_box.Value = new DateTime(2025, 12, 11, 13, 15, 38, 541);
             // 
             // otsi_reg_txt_box
             // 

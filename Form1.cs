@@ -41,40 +41,7 @@ namespace Cars
             if (omanik_data.Columns["Id"] != null)
                 omanik_data.Columns["Id"].Visible = false;
         }
-        private void kuup_ValueChanged(object sender, EventArgs e)
-        {
-            var selectedDate = kuup_txt_box.Value.Date;
-            var today = DateTime.Today;
-
-            if (selectedDate == today)
-            {
-                var now = DateTime.Now;
-                var nextHour = now.AddHours(1);
-                var rounded = new DateTime(
-                    selectedDate.Year,
-                    selectedDate.Month,
-                    selectedDate.Day,
-                    nextHour.Hour,
-                    0,
-                    0
-                );
-
-                time_txt_box.Value = rounded;
-                time_txt_box.MinDate = rounded;
-            }
-            else
-            {
-                var eightAm = new DateTime(
-                    selectedDate.Year,
-                    selectedDate.Month,
-                    selectedDate.Day,
-                    8, 0, 0
-                );
-
-                time_txt_box.Value = eightAm;
-                time_txt_box.MinDate = eightAm;
-            }
-        }
+        
         private void LaeOmanik()
         {
             omanik_com_box.DataSource = _db.Owners.ToList();
@@ -744,6 +711,7 @@ namespace Cars
             LaeCars();
             LaeOmanik();
             LaeTeenused();
+            puhasta();
         }
         private void otsi_regnum_txt_box_TextChanged(object sender, EventArgs e)
         {
