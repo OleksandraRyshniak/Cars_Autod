@@ -6,11 +6,25 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Cars.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialExtendedSchema : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Mechanics",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Mechanics", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Owners",
                 columns: table => new
@@ -68,6 +82,8 @@ namespace Cars.Migrations
                     CarId = table.Column<int>(type: "int", nullable: false),
                     ServiceId = table.Column<int>(type: "int", nullable: false),
                     DateOfService = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    MechanicId = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Mileage = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -77,6 +93,12 @@ namespace Cars.Migrations
                         name: "FK_CarServices_Cars_CarId",
                         column: x => x.CarId,
                         principalTable: "Cars",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CarServices_Mechanics_MechanicId",
+                        column: x => x.MechanicId,
+                        principalTable: "Mechanics",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -93,6 +115,11 @@ namespace Cars.Migrations
                 column: "OwnerId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_CarServices_MechanicId",
+                table: "CarServices",
+                column: "MechanicId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_CarServices_ServiceId",
                 table: "CarServices",
                 column: "ServiceId");
@@ -106,6 +133,9 @@ namespace Cars.Migrations
 
             migrationBuilder.DropTable(
                 name: "Cars");
+
+            migrationBuilder.DropTable(
+                name: "Mechanics");
 
             migrationBuilder.DropTable(
                 name: "Services");

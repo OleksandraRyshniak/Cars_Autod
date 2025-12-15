@@ -35,13 +35,24 @@ namespace Cars
         public ICollection<CarService> CarServices { get; set; }
     }
 
+    public class Mechanic
+    {
+        public int Id { get; set; }
+        public string FullName { get; set; }
+        public string Phone { get; set; }
+        public ICollection<CarService> CarServices { get; set; }
+    }
+
     public class CarService
     {
         public int CarId { get; set; }
         public Car Car { get; set; }
         public int ServiceId { get; set; }
         public Service Service { get; set; }
+        public int MechanicId { get; set; }
+        public Mechanic Mechanic { get; set; }
         public DateTime DateOfService { get; set; } = DateTime.Now;
+        public string Status { get; set; }
         public int Mileage { get; set; }
     }
 }

@@ -41,7 +41,7 @@ namespace Cars
             if (omanik_data.Columns["Id"] != null)
                 omanik_data.Columns["Id"].Visible = false;
         }
-        
+
         private void LaeOmanik()
         {
             omanik_com_box.DataSource = _db.Owners.ToList();
@@ -118,7 +118,7 @@ namespace Cars
                 var phoneExists = _db.Owners.Any(o => o.Phone == txt_box_phone.Text);
                 if (phoneExists)
                 {
-                    MessageBox.Show("Selline telefoninumber on juba olemas!"); 
+                    MessageBox.Show("Selline telefoninumber on juba olemas!");
                     return;
                 }
 
@@ -397,7 +397,9 @@ namespace Cars
                 teenus_com_box.SelectedIndex = -1;
                 kuup_txt_box.Value = DateTime.Now;
                 time_txt_box.Value = DateTime.Parse("12:00");
+
                 aeg_txt_box.Clear();
+
             }
         }
         private void kust__btn_Click(object sender, EventArgs e)
@@ -755,6 +757,11 @@ namespace Cars
                     c.Mileage,
                 })
                 .ToList();
+        }
+        private void mehaanik_btn_Click(object sender, EventArgs e)
+        {
+            mehaanik mehaanik = new mehaanik();
+            mehaanik.Show();
         }
     }
 }

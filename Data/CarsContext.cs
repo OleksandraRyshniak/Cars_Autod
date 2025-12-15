@@ -13,6 +13,7 @@ namespace Cars.Data
         public DbSet<Car> Cars { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<CarService> CarServices { get; set; }
+        public DbSet<Mechanic> Mechanics { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -35,6 +36,11 @@ namespace Cars.Data
                 .HasOne(cs => cs.Service)
                 .WithMany(s => s.CarServices)
                 .HasForeignKey(cs => cs.ServiceId);
+
+            modelBuilder.Entity<CarService>()
+            .HasOne(cs => cs.Mechanic)
+            .WithMany(m => m.CarServices)
+            .HasForeignKey(cs => cs.MechanicId);
         }
         public void EnsureCreated()
         {

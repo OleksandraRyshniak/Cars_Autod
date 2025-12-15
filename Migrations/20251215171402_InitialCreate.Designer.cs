@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cars.Migrations
 {
     [DbContext(typeof(CarsContext))]
-    [Migration("20251127105918_InitialExtendedSchema")]
-    partial class InitialExtendedSchema
+    [Migration("20251215171402_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -66,14 +66,44 @@ namespace Cars.Migrations
                     b.Property<DateTime>("DateOfService")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("MechanicId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Mileage")
                         .HasColumnType("int");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("CarId", "ServiceId", "DateOfService");
+
+                    b.HasIndex("MechanicId");
 
                     b.HasIndex("ServiceId");
 
                     b.ToTable("CarServices");
+                });
+
+            modelBuilder.Entity("Cars.Mechanic", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Mechanics");
                 });
 
             modelBuilder.Entity("Cars.Owner", b =>
@@ -136,6 +166,12 @@ namespace Cars.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Cars.Mechanic", "Mechanic")
+                        .WithMany("CarServices")
+                        .HasForeignKey("MechanicId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Cars.Service", "Service")
                         .WithMany("CarServices")
                         .HasForeignKey("ServiceId")
@@ -144,10 +180,17 @@ namespace Cars.Migrations
 
                     b.Navigation("Car");
 
+                    b.Navigation("Mechanic");
+
                     b.Navigation("Service");
                 });
 
             modelBuilder.Entity("Cars.Car", b =>
+                {
+                    b.Navigation("CarServices");
+                });
+
+            modelBuilder.Entity("Cars.Mechanic", b =>
                 {
                     b.Navigation("CarServices");
                 });
