@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Cars
 {
     internal static class Program
@@ -8,6 +10,13 @@ namespace Cars
         [STAThread]
         static void Main()
         {
+            string lang = Properties.Settings.Default.UserLanguage;
+
+            if (string.IsNullOrWhiteSpace(lang))
+                lang = "et-EE"; // vaikimisi
+
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();

@@ -117,7 +117,370 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="nimi_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 55</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="nimi_txt_box.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="nimi_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 27</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="nimi_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;nimi_txt_box.Name" xml:space="preserve">
+    <value>nimi_txt_box</value>
+  </data>
+  <data name="&gt;&gt;nimi_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nimi_txt_box.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nimi_txt_box.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="nimi_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="nimi_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 59</value>
+  </data>
+  <data name="nimi_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
+  </data>
+  <data name="nimi_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="nimi_lbl.Text" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="&gt;&gt;nimi_lbl.Name" xml:space="preserve">
+    <value>nimi_lbl</value>
+  </data>
+  <data name="&gt;&gt;nimi_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nimi_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nimi_lbl.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="hind_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 108</value>
+  </data>
+  <data name="hind_txt_box.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="hind_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 27</value>
+  </data>
+  <data name="hind_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;hind_txt_box.Name" xml:space="preserve">
+    <value>hind_txt_box</value>
+  </data>
+  <data name="&gt;&gt;hind_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hind_txt_box.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;hind_txt_box.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="hind_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hind_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 112</value>
+  </data>
+  <data name="hind_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
+  </data>
+  <data name="hind_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="hind_lbl.Text" xml:space="preserve">
+    <value>Hind</value>
+  </data>
+  <data name="&gt;&gt;hind_lbl.Name" xml:space="preserve">
+    <value>hind_lbl</value>
+  </data>
+  <data name="&gt;&gt;hind_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hind_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;hind_lbl.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="hooldus_kir_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hooldus_kir_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 9</value>
+  </data>
+  <data name="hooldus_kir_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
+  </data>
+  <data name="hooldus_kir_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="hooldus_kir_lbl.Text" xml:space="preserve">
+    <value>Teenuste</value>
+  </data>
+  <data name="&gt;&gt;hooldus_kir_lbl.Name" xml:space="preserve">
+    <value>hooldus_kir_lbl</value>
+  </data>
+  <data name="&gt;&gt;hooldus_kir_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hooldus_kir_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;hooldus_kir_lbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lisa_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 52</value>
+  </data>
+  <data name="lisa_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="lisa_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 32</value>
+  </data>
+  <data name="lisa_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="lisa_btn.Text" xml:space="preserve">
+    <value>Lisa</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.Name" xml:space="preserve">
+    <value>lisa_btn</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="teenuste_data.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 219</value>
+  </data>
+  <data name="teenuste_data.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="teenuste_data.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 375</value>
+  </data>
+  <data name="teenuste_data.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;teenuste_data.Name" xml:space="preserve">
+    <value>teenuste_data</value>
+  </data>
+  <data name="&gt;&gt;teenuste_data.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;teenuste_data.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;teenuste_data.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="kustuta_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>338, 52</value>
+  </data>
+  <data name="kustuta_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="kustuta_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 32</value>
+  </data>
+  <data name="kustuta_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="kustuta_btn.Text" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="&gt;&gt;kustuta_btn.Name" xml:space="preserve">
+    <value>kustuta_btn</value>
+  </data>
+  <data name="&gt;&gt;kustuta_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kustuta_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;kustuta_btn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="uuenda_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 92</value>
+  </data>
+  <data name="uuenda_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="uuenda_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 32</value>
+  </data>
+  <data name="uuenda_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="uuenda_btn.Text" xml:space="preserve">
+    <value>Uuenda</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.Name" xml:space="preserve">
+    <value>uuenda_btn</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="keel_com.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 5</value>
+  </data>
+  <data name="keel_com.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 28</value>
+  </data>
+  <data name="keel_com.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;keel_com.Name" xml:space="preserve">
+    <value>keel_com</value>
+  </data>
+  <data name="&gt;&gt;keel_com.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;keel_com.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;keel_com.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="otsi_teen__lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="otsi_teen__lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 164</value>
+  </data>
+  <data name="otsi_teen__lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 20</value>
+  </data>
+  <data name="otsi_teen__lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="otsi_teen__lbl.Text" xml:space="preserve">
+    <value>Otsida nime järgi</value>
+  </data>
+  <data name="&gt;&gt;otsi_teen__lbl.Name" xml:space="preserve">
+    <value>otsi_teen__lbl</value>
+  </data>
+  <data name="&gt;&gt;otsi_teen__lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_teen__lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;otsi_teen__lbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="otsi_teen_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 160</value>
+  </data>
+  <data name="otsi_teen_txt_box.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="otsi_teen_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 27</value>
+  </data>
+  <data name="otsi_teen_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;otsi_teen_txt_box.Name" xml:space="preserve">
+    <value>otsi_teen_txt_box</value>
+  </data>
+  <data name="&gt;&gt;otsi_teen_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_teen_txt_box.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;otsi_teen_txt_box.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="pageSetupDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="koik_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 160</value>
+  </data>
+  <data name="koik_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="koik_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 31</value>
+  </data>
+  <data name="koik_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="koik_btn.Text" xml:space="preserve">
+    <value>Vaata kõik</value>
+  </data>
+  <data name="&gt;&gt;koik_btn.Name" xml:space="preserve">
+    <value>koik_btn</value>
+  </data>
+  <data name="&gt;&gt;koik_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;koik_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;koik_btn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 20</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>429, 600</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Lisa_hoolduse_kirjed</value>
+  </data>
+  <data name="&gt;&gt;pageSetupDialog1.Name" xml:space="preserve">
+    <value>pageSetupDialog1</value>
+  </data>
+  <data name="&gt;&gt;pageSetupDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PageSetupDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Teenuste</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

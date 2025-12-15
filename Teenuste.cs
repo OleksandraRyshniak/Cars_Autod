@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -73,7 +74,7 @@ namespace Cars
         {
             if (teenuste_data.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Palun valige kustutatav omanik.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Palun valige kustutatav teenuste.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string teenuste = teenuste_data.SelectedRows[0].Cells["Name"].Value?.ToString() ?? "valitud teenuste";
@@ -123,10 +124,6 @@ namespace Cars
             teenuste.Price = price;
             _db.SaveChanges();
             LoeServices();
-        }
-        private void vaate_btn_Click(object sender, EventArgs e)
-        {
-            LoeServices();
             puhasta();
         }
 
@@ -155,7 +152,6 @@ namespace Cars
         {
             LoeServices();
         }
-
         private void teenuste_data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -165,6 +161,61 @@ namespace Cars
                 nimi_txt_box.Text = row.Cells["Name"].Value?.ToString() ?? "";
                 hind_txt_box.Text = row.Cells["Price"].Value?.ToString() ?? "";
 
+            }
+        }
+        bool _keelLaetud;
+        private void Teenuste_Load(object sender, EventArgs e)
+        {
+            _keelLaetud = false;
+
+            keel_com.Items.Clear();
+            keel_com.Items.Add("Eesti");
+            keel_com.Items.Add("English");
+            string savedLangCode = Properties.Settings.Default.UserLanguage;
+            string displayLanguage = "Eesti";
+
+            if (savedLangCode == "en-US")
+            {
+                displayLanguage = "English";
+            }
+            else
+            {
+                displayLanguage = "Eesti";
+            }
+            keel_com.SelectedItem = displayLanguage;
+            _keelLaetud = true;
+        }
+        private void ChangeLanguage(string lang)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
+            var res = new ComponentResourceManager(typeof(Teenuste));
+            ApplyResourcesToControl(this, res);
+            res.ApplyResources(this, "$this");
+            Properties.Settings.Default.UserLanguage = lang;
+            Properties.Settings.Default.Save();
+
+        }
+        private void ApplyResourcesToControl(Control ctrl, ComponentResourceManager res)
+        {
+            res.ApplyResources(ctrl, ctrl.Name);
+            foreach (Control child in ctrl.Controls)
+            {
+                ApplyResourcesToControl(child, res);
+            }
+        }
+
+        private void keel_com_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!_keelLaetud)
+                return;
+            if (keel_com.SelectedItem?.ToString() == "English")
+            {
+                ChangeLanguage("en-US");
+            }
+            else
+            {
+                ChangeLanguage("et-EE");
             }
         }
     }

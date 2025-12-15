@@ -25,6 +25,7 @@ namespace Cars
             LaeCars();
             LoeCarServices();
             LaeTeenused();
+            Tana();
             using (var db = new CarsContext())
             {
                 db.Database.EnsureCreated();
@@ -41,7 +42,37 @@ namespace Cars
             if (omanik_data.Columns["Id"] != null)
                 omanik_data.Columns["Id"].Visible = false;
         }
-
+        private void Tana()
+        {
+            tana_data.DataSource = _db.CarServices
+                .Include(cs => cs.Service)
+                .Include(cs => cs.Car)
+                .Select(cs => new
+                {
+                    Car = cs.Car.RegistrationNumber,
+                    cs.CarId,
+                    Service = cs.Service.Name,
+                    cs.ServiceId,
+                    cs.DateOfService,
+                    Mehaanik = cs.Mechanic.FullName,
+                    cs.MechanicId,
+                    cs.Status,
+                    cs.Mileage
+                })
+                .ToList();
+            if (tana_data.Columns["MechanicId"] != null)
+            {
+                tana_data.Columns["MechanicId"].Visible = false;
+            }
+            if (tana_data.Columns["CarId"] != null)
+            {
+                tana_data.Columns["CarId"].Visible = false;
+            }
+            if (tana_data.Columns["ServiceId"] != null)
+            {
+                tana_data.Columns["ServiceId"].Visible = false;
+            }
+        }
         private void LaeOmanik()
         {
             omanik_com_box.DataSource = _db.Owners.ToList();
@@ -86,9 +117,16 @@ namespace Cars
                     Service = cs.Service.Name,
                     cs.ServiceId,
                     cs.DateOfService,
+                    Mehaanik = cs.Mechanic.FullName,
+                    cs.MechanicId,
+                    cs.Status,
                     cs.Mileage
                 })
                 .ToList();
+            if (hooldus_data.Columns["MechanicId"] != null)
+            {
+                hooldus_data.Columns["MechanicId"].Visible = false;
+            }
             if (hooldus_data.Columns["CarId"] != null)
             {
                 hooldus_data.Columns["CarId"].Visible = false;
@@ -762,6 +800,35 @@ namespace Cars
         {
             mehaanik mehaanik = new mehaanik();
             mehaanik.Show();
+        }
+
+        private void vaata_btn_Click(object sender, EventArgs e)
+        {
+            if (tab_control.SelectedTab == omanik_page)
+            {
+                LoeOmanik();
+                puhasta();
+            }
+            else if (tab_control.SelectedTab == auto_page)
+            {
+                LoeCar();
+                puhasta();
+            }
+            else if (tab_control.SelectedTab == hool_teen_page)
+            {
+                LoeCarServices();
+                puhasta();
+            }
+            else if (tab_control.SelectedTab == tana_page)
+            {
+
+                puhasta();
+            }
+        }
+
+        private void tana_data_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
