@@ -145,10 +145,24 @@ namespace Cars
             {
                 DataGridViewRow row = meh_data.Rows[e.RowIndex];
 
-                meh_data.Text = row.Cells["FullName"].Value?.ToString() ?? "";
-                meh_data.Text = row.Cells["Phone"].Value?.ToString() ?? "";
+                nimi_txt.Text = row.Cells["FullName"].Value?.ToString() ?? "";
+                phone_txt.Text = row.Cells["Phone"].Value?.ToString() ?? "";
 
             }
+        }
+
+        private void ApplyResourcesToControl(Control ctrl, ComponentResourceManager res)
+        {
+            res.ApplyResources(ctrl, ctrl.Name);
+            foreach (Control child in ctrl.Controls)
+            {
+                ApplyResourcesToControl(child, res);
+            }
+        }
+
+        private void mehaanik_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

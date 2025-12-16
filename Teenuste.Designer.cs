@@ -38,10 +38,8 @@
             teenuste_data = new DataGridView();
             kustuta_btn = new Button();
             uuenda_btn = new Button();
-            keel_com = new ComboBox();
             otsi_teen__lbl = new Label();
             otsi_teen_txt_box = new TextBox();
-            pageSetupDialog1 = new PageSetupDialog();
             koik_btn = new Button();
             ((System.ComponentModel.ISupportInitialize)teenuste_data).BeginInit();
             SuspendLayout();
@@ -73,9 +71,11 @@
             // 
             // lisa_btn
             // 
+            lisa_btn.BackColor = Color.LightSteelBlue;
+            lisa_btn.ForeColor = SystemColors.ControlText;
             resources.ApplyResources(lisa_btn, "lisa_btn");
             lisa_btn.Name = "lisa_btn";
-            lisa_btn.UseVisualStyleBackColor = true;
+            lisa_btn.UseVisualStyleBackColor = false;
             lisa_btn.Click += lisa_btn_Click;
             // 
             // teenuste_data
@@ -88,24 +88,20 @@
             // 
             // kustuta_btn
             // 
+            kustuta_btn.BackColor = Color.LightSteelBlue;
             resources.ApplyResources(kustuta_btn, "kustuta_btn");
             kustuta_btn.Name = "kustuta_btn";
-            kustuta_btn.UseVisualStyleBackColor = true;
+            kustuta_btn.UseVisualStyleBackColor = false;
             kustuta_btn.Click += kustuta_btn_Click;
             // 
             // uuenda_btn
             // 
+            uuenda_btn.BackColor = Color.LightSteelBlue;
+            uuenda_btn.ForeColor = SystemColors.WindowText;
             resources.ApplyResources(uuenda_btn, "uuenda_btn");
             uuenda_btn.Name = "uuenda_btn";
-            uuenda_btn.UseVisualStyleBackColor = true;
+            uuenda_btn.UseVisualStyleBackColor = false;
             uuenda_btn.Click += uuenda_btn_Click;
-            // 
-            // keel_com
-            // 
-            keel_com.FormattingEnabled = true;
-            resources.ApplyResources(keel_com, "keel_com");
-            keel_com.Name = "keel_com";
-            keel_com.SelectedIndexChanged += keel_com_SelectedIndexChanged;
             // 
             // otsi_teen__lbl
             // 
@@ -120,19 +116,20 @@
             // 
             // koik_btn
             // 
+            koik_btn.BackColor = Color.LightSteelBlue;
             resources.ApplyResources(koik_btn, "koik_btn");
             koik_btn.Name = "koik_btn";
-            koik_btn.UseVisualStyleBackColor = true;
+            koik_btn.UseVisualStyleBackColor = false;
             koik_btn.Click += koik_btn_Click;
             // 
             // Teenuste
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             Controls.Add(koik_btn);
             Controls.Add(otsi_teen_txt_box);
             Controls.Add(otsi_teen__lbl);
-            Controls.Add(keel_com);
             Controls.Add(uuenda_btn);
             Controls.Add(kustuta_btn);
             Controls.Add(teenuste_data);
@@ -160,10 +157,8 @@
         private DataGridView teenuste_data;
         private Button kustuta_btn;
         private Button uuenda_btn;
-        private ComboBox keel_com;
         private Label otsi_teen__lbl;
         private TextBox otsi_teen_txt_box;
-        private PageSetupDialog pageSetupDialog1;
         private Button koik_btn;
     }
 }

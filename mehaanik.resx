@@ -117,4 +117,379 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="meh_data.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;koik_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="phone_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 81</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="otsi_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>mehaanik</value>
+  </data>
+  <data name="lisa_btn.Text" xml:space="preserve">
+    <value>Lisa</value>
+  </data>
+  <data name="keel_com.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="&gt;&gt;nimi_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nimi_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;koik_btn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="otsi_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;nimi_lbl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="meh_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 9</value>
+  </data>
+  <data name="nimi_txt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 46</value>
+  </data>
+  <data name="phone_lbl.Text" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="phone_txt.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;meh_data.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="otsi_txt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 146</value>
+  </data>
+  <data name="meh_data.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="otsi_txt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 23</value>
+  </data>
+  <data name="&gt;&gt;nimi_txt.Name" xml:space="preserve">
+    <value>nimi_txt</value>
+  </data>
+  <data name="uuenda_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 100</value>
+  </data>
+  <data name="keel_com.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="meh_data.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 202</value>
+  </data>
+  <data name="&gt;&gt;nimi_lbl.Name" xml:space="preserve">
+    <value>nimi_lbl</value>
+  </data>
+  <data name="meh_data.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.Name" xml:space="preserve">
+    <value>lisa_btn</value>
+  </data>
+  <data name="&gt;&gt;koik_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;phone_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="otsi_lbl.Text" xml:space="preserve">
+    <value>Otsida telefoninumbri järgi</value>
+  </data>
+  <data name="uuenda_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kust_btn.Name" xml:space="preserve">
+    <value>kust_btn</value>
+  </data>
+  <data name="lisa_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="koik_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lisa_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 26</value>
+  </data>
+  <data name="nimi_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="nimi_txt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;meh_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;keel_com.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="meh_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="&gt;&gt;kust_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="nimi_txt.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lisa_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 40</value>
+  </data>
+  <data name="nimi_lbl.Text" xml:space="preserve">
+    <value>Täisnimi</value>
+  </data>
+  <data name="uuenda_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="meh_data.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 177</value>
+  </data>
+  <data name="kust_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 26</value>
+  </data>
+  <data name="&gt;&gt;koik_btn.Name" xml:space="preserve">
+    <value>koik_btn</value>
+  </data>
+  <data name="koik_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 140</value>
+  </data>
+  <data name="&gt;&gt;otsi_lbl.Name" xml:space="preserve">
+    <value>otsi_lbl</value>
+  </data>
+  <data name="&gt;&gt;meh_lbl.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="meh_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Stencil, 14.25pt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>mehaanik</value>
+  </data>
+  <data name="&gt;&gt;phone_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nimi_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 15</value>
+  </data>
+  <data name="&gt;&gt;meh_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;kust_btn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;otsi_txt.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;nimi_txt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;meh_data.Name" xml:space="preserve">
+    <value>meh_data</value>
+  </data>
+  <data name="&gt;&gt;keel_com.Name" xml:space="preserve">
+    <value>keel_com</value>
+  </data>
+  <data name="koik_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 26</value>
+  </data>
+  <data name="&gt;&gt;kust_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.Name" xml:space="preserve">
+    <value>uuenda_btn</value>
+  </data>
+  <data name="&gt;&gt;otsi_txt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="otsi_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 15</value>
+  </data>
+  <data name="&gt;&gt;nimi_txt.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="phone_txt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="phone_txt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 23</value>
+  </data>
+  <data name="&gt;&gt;keel_com.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="kust_btn.Text" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="&gt;&gt;otsi_lbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="otsi_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 121</value>
+  </data>
+  <data name="&gt;&gt;keel_com.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="uuenda_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 26</value>
+  </data>
+  <data name="lisa_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="kust_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;phone_txt.Name" xml:space="preserve">
+    <value>phone_txt</value>
+  </data>
+  <data name="&gt;&gt;otsi_txt.Name" xml:space="preserve">
+    <value>otsi_txt</value>
+  </data>
+  <data name="&gt;&gt;otsi_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="meh_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="nimi_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;phone_lbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="phone_txt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 81</value>
+  </data>
+  <data name="otsi_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="koik_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;nimi_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="keel_com.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 1</value>
+  </data>
+  <data name="kust_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 70</value>
+  </data>
+  <data name="nimi_txt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 23</value>
+  </data>
+  <data name="koik_btn.Text" xml:space="preserve">
+    <value>Vaata kõik</value>
+  </data>
+  <data name="nimi_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="uuenda_btn.Text" xml:space="preserve">
+    <value>Uuenda</value>
+  </data>
+  <data name="meh_lbl.Text" xml:space="preserve">
+    <value>Mehaanikud</value>
+  </data>
+  <data name="&gt;&gt;phone_txt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="otsi_txt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;phone_txt.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="phone_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="phone_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>386, 381</value>
+  </data>
+  <data name="kust_btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="phone_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;phone_lbl.Name" xml:space="preserve">
+    <value>phone_lbl</value>
+  </data>
+  <data name="meh_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;meh_data.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="phone_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="otsi_txt.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;phone_lbl.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="keel_com.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;meh_data.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="nimi_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 46</value>
+  </data>
+  <data name="&gt;&gt;otsi_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;meh_lbl.Name" xml:space="preserve">
+    <value>meh_lbl</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

@@ -28,60 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tab_control = new TabControl();
-            omanik_page = new TabPage();
-            otsi_tel_txt_box = new TextBox();
-            otsi_tel_lbl = new Label();
-            txt_box_phone = new TextBox();
-            phone_lbl = new Label();
-            label1 = new Label();
-            omanik_data = new DataGridView();
-            txt_box_full_name = new TextBox();
-            lbl_full_name = new Label();
-            auto_page = new TabPage();
-            otsi_regnum_txt_box = new TextBox();
-            otsi_regnum_lbl = new Label();
-            auto_reg_num_text_box = new TextBox();
-            automudel_txt_box = new TextBox();
-            automark_text_box = new TextBox();
-            omanik_lbl = new Label();
-            auto_reg_num_lbl = new Label();
-            automudel_lbl = new Label();
-            omanik_com_box = new ComboBox();
-            automark_lbl = new Label();
-            autod_data = new DataGridView();
-            hool_teen_page = new TabPage();
-            status_lbl = new Label();
-            status_com = new ComboBox();
-            label2 = new Label();
-            time_txt_box = new DateTimePicker();
-            kuup_txt_box = new DateTimePicker();
-            otsi_reg_txt_box = new TextBox();
-            otsi_reg_lbl = new Label();
-            auto_lbl = new Label();
-            aeg_txt_box = new TextBox();
-            auto_com_box = new ComboBox();
-            teenus_com_box = new ComboBox();
-            mileeg_lbl = new Label();
-            label3 = new Label();
-            teenus_lbl = new Label();
-            hooldus_kir_lbl = new Label();
-            hooldus_data = new DataGridView();
-            tana_page = new TabPage();
-            mile_txt = new TextBox();
-            aeg_txt = new DateTimePicker();
-            meh_com = new ComboBox();
-            sts_com = new ComboBox();
-            teen_com = new ComboBox();
-            auto_com = new ComboBox();
-            mil_lbl = new Label();
-            sts_lbl = new Label();
-            meh_lbl = new Label();
-            aeg_lbl = new Label();
-            serv = new Label();
-            auto = new Label();
-            tana_lbl = new Label();
-            tana_data = new DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             lisa_btn = new Button();
             kust__btn = new Button();
@@ -89,261 +36,126 @@
             keel_com_box = new ComboBox();
             mehaanik_btn = new Button();
             vaata_btn = new Button();
-            ost_lbl = new Label();
-            time_time = new DateTimePicker();
-            tab_control.SuspendLayout();
-            omanik_page.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)omanik_data).BeginInit();
-            auto_page.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)autod_data).BeginInit();
+            hool_teen_page = new TabPage();
+            mehk_com = new ComboBox();
+            mehaan_lbl = new Label();
+            status_lbl = new Label();
+            status_com = new ComboBox();
+            label2 = new Label();
+            time_txt_box = new DateTimePicker();
+            kuup_txt_box = new DateTimePicker();
+            otsi_reg_txt_box = new TextBox();
+            aeg_txt_box = new TextBox();
+            otsi_reg_lbl = new Label();
+            auto_lbl = new Label();
+            auto_com_box = new ComboBox();
+            teenus_com_box = new ComboBox();
+            mileeg_lbl = new Label();
+            label3 = new Label();
+            teenus_lbl = new Label();
+            hooldus_kir_lbl = new Label();
+            hooldus_data = new DataGridView();
+            auto_page = new TabPage();
+            label4 = new Label();
+            otsi_regnum_txt_box = new TextBox();
+            auto_reg_num_text_box = new TextBox();
+            automudel_txt_box = new TextBox();
+            automark_text_box = new TextBox();
+            otsi_regnum_lbl = new Label();
+            omanik_lbl = new Label();
+            auto_reg_num_lbl = new Label();
+            automudel_lbl = new Label();
+            omanik_com_box = new ComboBox();
+            automark_lbl = new Label();
+            autod_data = new DataGridView();
+            omanik_page = new TabPage();
+            label5 = new Label();
+            otsi_tel_txt_box = new TextBox();
+            txt_box_phone = new TextBox();
+            txt_box_full_name = new TextBox();
+            otsi_tel_lbl = new Label();
+            phone_lbl = new Label();
+            label1 = new Label();
+            omanik_data = new DataGridView();
+            lbl_full_name = new Label();
+            tab_control = new TabControl();
             hool_teen_page.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)hooldus_data).BeginInit();
-            tana_page.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)tana_data).BeginInit();
+            auto_page.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)autod_data).BeginInit();
+            omanik_page.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)omanik_data).BeginInit();
+            tab_control.SuspendLayout();
             SuspendLayout();
             // 
-            // tab_control
+            // button1
             // 
-            tab_control.Controls.Add(omanik_page);
-            tab_control.Controls.Add(auto_page);
-            tab_control.Controls.Add(hool_teen_page);
-            tab_control.Controls.Add(tana_page);
-            tab_control.Location = new Point(14, 13);
-            tab_control.Margin = new Padding(3, 4, 3, 4);
-            tab_control.Name = "tab_control";
-            tab_control.SelectedIndex = 0;
-            tab_control.Size = new Size(755, 590);
-            tab_control.TabIndex = 0;
-            tab_control.Click += tab_control_Click;
+            button1.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(button1, "button1");
+            button1.Name = "button1";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += lisa_teenuste_btn_Click;
             // 
-            // omanik_page
+            // lisa_btn
             // 
-            omanik_page.Controls.Add(otsi_tel_txt_box);
-            omanik_page.Controls.Add(otsi_tel_lbl);
-            omanik_page.Controls.Add(txt_box_phone);
-            omanik_page.Controls.Add(phone_lbl);
-            omanik_page.Controls.Add(label1);
-            omanik_page.Controls.Add(omanik_data);
-            omanik_page.Controls.Add(txt_box_full_name);
-            omanik_page.Controls.Add(lbl_full_name);
-            omanik_page.Location = new Point(4, 29);
-            omanik_page.Margin = new Padding(3, 4, 3, 4);
-            omanik_page.Name = "omanik_page";
-            omanik_page.Padding = new Padding(3, 4, 3, 4);
-            omanik_page.Size = new Size(747, 557);
-            omanik_page.TabIndex = 0;
-            omanik_page.Text = "Omanikud";
-            omanik_page.UseVisualStyleBackColor = true;
+            lisa_btn.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(lisa_btn, "lisa_btn");
+            lisa_btn.Name = "lisa_btn";
+            lisa_btn.UseVisualStyleBackColor = false;
+            lisa_btn.Click += lisa_btn_Click;
             // 
-            // otsi_tel_txt_box
+            // kust__btn
             // 
-            otsi_tel_txt_box.Location = new Point(542, 288);
-            otsi_tel_txt_box.Margin = new Padding(3, 4, 3, 4);
-            otsi_tel_txt_box.Name = "otsi_tel_txt_box";
-            otsi_tel_txt_box.Size = new Size(159, 27);
-            otsi_tel_txt_box.TabIndex = 9;
-            otsi_tel_txt_box.TextChanged += otsi_tel_txt_box_TextChanged;
+            kust__btn.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(kust__btn, "kust__btn");
+            kust__btn.Name = "kust__btn";
+            kust__btn.UseVisualStyleBackColor = false;
+            kust__btn.Click += kust__btn_Click;
             // 
-            // otsi_tel_lbl
+            // uuenda_btn
             // 
-            otsi_tel_lbl.AutoSize = true;
-            otsi_tel_lbl.BackColor = Color.White;
-            otsi_tel_lbl.Location = new Point(542, 241);
-            otsi_tel_lbl.Name = "otsi_tel_lbl";
-            otsi_tel_lbl.Size = new Size(188, 20);
-            otsi_tel_lbl.TabIndex = 8;
-            otsi_tel_lbl.Text = "Otsida telefoninumbri järgi\r\n";
-            otsi_tel_lbl.TextAlign = ContentAlignment.TopCenter;
+            uuenda_btn.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(uuenda_btn, "uuenda_btn");
+            uuenda_btn.Name = "uuenda_btn";
+            uuenda_btn.UseVisualStyleBackColor = false;
+            uuenda_btn.Click += uuenda_btn_Click;
             // 
-            // txt_box_phone
+            // keel_com_box
             // 
-            txt_box_phone.Location = new Point(542, 169);
-            txt_box_phone.Margin = new Padding(3, 4, 3, 4);
-            txt_box_phone.Name = "txt_box_phone";
-            txt_box_phone.Size = new Size(159, 27);
-            txt_box_phone.TabIndex = 6;
+            keel_com_box.FormattingEnabled = true;
+            resources.ApplyResources(keel_com_box, "keel_com_box");
+            keel_com_box.Name = "keel_com_box";
+            keel_com_box.SelectedIndexChanged += keel_com_box_SelectedIndexChanged;
             // 
-            // phone_lbl
+            // mehaanik_btn
             // 
-            phone_lbl.AutoSize = true;
-            phone_lbl.BackColor = Color.White;
-            phone_lbl.Location = new Point(542, 128);
-            phone_lbl.Name = "phone_lbl";
-            phone_lbl.Size = new Size(113, 20);
-            phone_lbl.TabIndex = 7;
-            phone_lbl.Text = "Telefoninumber";
-            phone_lbl.TextAlign = ContentAlignment.TopCenter;
+            mehaanik_btn.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(mehaanik_btn, "mehaanik_btn");
+            mehaanik_btn.Name = "mehaanik_btn";
+            mehaanik_btn.UseVisualStyleBackColor = false;
+            mehaanik_btn.Click += mehaanik_btn_Click;
             // 
-            // label1
+            // vaata_btn
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(567, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 20);
-            label1.TabIndex = 3;
-            // 
-            // omanik_data
-            // 
-            omanik_data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            omanik_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            omanik_data.Location = new Point(14, 23);
-            omanik_data.Margin = new Padding(3, 4, 3, 4);
-            omanik_data.Name = "omanik_data";
-            omanik_data.RowHeadersWidth = 51;
-            omanik_data.Size = new Size(501, 501);
-            omanik_data.TabIndex = 0;
-            omanik_data.CellClick += omanik_data_CellClick;
-            // 
-            // txt_box_full_name
-            // 
-            txt_box_full_name.Location = new Point(542, 75);
-            txt_box_full_name.Margin = new Padding(3, 4, 3, 4);
-            txt_box_full_name.Name = "txt_box_full_name";
-            txt_box_full_name.Size = new Size(159, 27);
-            txt_box_full_name.TabIndex = 4;
-            // 
-            // lbl_full_name
-            // 
-            lbl_full_name.AutoSize = true;
-            lbl_full_name.BackColor = Color.White;
-            lbl_full_name.Location = new Point(542, 36);
-            lbl_full_name.Name = "lbl_full_name";
-            lbl_full_name.Size = new Size(156, 20);
-            lbl_full_name.TabIndex = 3;
-            lbl_full_name.Text = "Ees- ja perekonnanimi";
-            lbl_full_name.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // auto_page
-            // 
-            auto_page.Controls.Add(otsi_regnum_txt_box);
-            auto_page.Controls.Add(otsi_regnum_lbl);
-            auto_page.Controls.Add(auto_reg_num_text_box);
-            auto_page.Controls.Add(automudel_txt_box);
-            auto_page.Controls.Add(automark_text_box);
-            auto_page.Controls.Add(omanik_lbl);
-            auto_page.Controls.Add(auto_reg_num_lbl);
-            auto_page.Controls.Add(automudel_lbl);
-            auto_page.Controls.Add(omanik_com_box);
-            auto_page.Controls.Add(automark_lbl);
-            auto_page.Controls.Add(autod_data);
-            auto_page.Location = new Point(4, 29);
-            auto_page.Margin = new Padding(3, 4, 3, 4);
-            auto_page.Name = "auto_page";
-            auto_page.Padding = new Padding(3, 4, 3, 4);
-            auto_page.Size = new Size(747, 557);
-            auto_page.TabIndex = 1;
-            auto_page.Text = "Autod";
-            auto_page.UseVisualStyleBackColor = true;
-            // 
-            // otsi_regnum_txt_box
-            // 
-            otsi_regnum_txt_box.Location = new Point(510, 304);
-            otsi_regnum_txt_box.Margin = new Padding(3, 4, 3, 4);
-            otsi_regnum_txt_box.Name = "otsi_regnum_txt_box";
-            otsi_regnum_txt_box.Size = new Size(185, 27);
-            otsi_regnum_txt_box.TabIndex = 11;
-            otsi_regnum_txt_box.TextChanged += otsi_regnum_txt_box_TextChanged;
-            // 
-            // otsi_regnum_lbl
-            // 
-            otsi_regnum_lbl.AutoSize = true;
-            otsi_regnum_lbl.Location = new Point(510, 275);
-            otsi_regnum_lbl.Name = "otsi_regnum_lbl";
-            otsi_regnum_lbl.Size = new Size(159, 20);
-            otsi_regnum_lbl.TabIndex = 10;
-            otsi_regnum_lbl.Text = "Otsida regnumbri järgi";
-            // 
-            // auto_reg_num_text_box
-            // 
-            auto_reg_num_text_box.Location = new Point(593, 153);
-            auto_reg_num_text_box.Margin = new Padding(3, 4, 3, 4);
-            auto_reg_num_text_box.Name = "auto_reg_num_text_box";
-            auto_reg_num_text_box.Size = new Size(133, 27);
-            auto_reg_num_text_box.TabIndex = 9;
-            // 
-            // automudel_txt_box
-            // 
-            automudel_txt_box.Location = new Point(593, 103);
-            automudel_txt_box.Margin = new Padding(3, 4, 3, 4);
-            automudel_txt_box.Name = "automudel_txt_box";
-            automudel_txt_box.Size = new Size(133, 27);
-            automudel_txt_box.TabIndex = 8;
-            // 
-            // automark_text_box
-            // 
-            automark_text_box.Location = new Point(593, 51);
-            automark_text_box.Margin = new Padding(3, 4, 3, 4);
-            automark_text_box.Name = "automark_text_box";
-            automark_text_box.Size = new Size(133, 27);
-            automark_text_box.TabIndex = 7;
-            // 
-            // omanik_lbl
-            // 
-            omanik_lbl.AutoSize = true;
-            omanik_lbl.Location = new Point(510, 204);
-            omanik_lbl.Name = "omanik_lbl";
-            omanik_lbl.Size = new Size(60, 20);
-            omanik_lbl.TabIndex = 6;
-            omanik_lbl.Text = "Omanik";
-            // 
-            // auto_reg_num_lbl
-            // 
-            auto_reg_num_lbl.AutoSize = true;
-            auto_reg_num_lbl.Location = new Point(510, 157);
-            auto_reg_num_lbl.Name = "auto_reg_num_lbl";
-            auto_reg_num_lbl.Size = new Size(86, 20);
-            auto_reg_num_lbl.TabIndex = 5;
-            auto_reg_num_lbl.Text = "Regnumber";
-            // 
-            // automudel_lbl
-            // 
-            automudel_lbl.AutoSize = true;
-            automudel_lbl.Location = new Point(510, 107);
-            automudel_lbl.Name = "automudel_lbl";
-            automudel_lbl.Size = new Size(83, 20);
-            automudel_lbl.TabIndex = 4;
-            automudel_lbl.Text = "Automudel";
-            // 
-            // omanik_com_box
-            // 
-            omanik_com_box.FormattingEnabled = true;
-            omanik_com_box.Location = new Point(593, 200);
-            omanik_com_box.Margin = new Padding(3, 4, 3, 4);
-            omanik_com_box.Name = "omanik_com_box";
-            omanik_com_box.Size = new Size(133, 28);
-            omanik_com_box.TabIndex = 2;
-            // 
-            // automark_lbl
-            // 
-            automark_lbl.AutoSize = true;
-            automark_lbl.Location = new Point(510, 55);
-            automark_lbl.Name = "automark_lbl";
-            automark_lbl.Size = new Size(74, 20);
-            automark_lbl.TabIndex = 1;
-            automark_lbl.Text = "Automark";
-            // 
-            // autod_data
-            // 
-            autod_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            autod_data.Location = new Point(7, 36);
-            autod_data.Margin = new Padding(3, 4, 3, 4);
-            autod_data.Name = "autod_data";
-            autod_data.RowHeadersWidth = 51;
-            autod_data.Size = new Size(496, 480);
-            autod_data.TabIndex = 0;
-            autod_data.CellClick += autod_data_CellClick;
+            vaata_btn.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(vaata_btn, "vaata_btn");
+            vaata_btn.Name = "vaata_btn";
+            vaata_btn.UseVisualStyleBackColor = false;
+            vaata_btn.Click += vaata_btn_Click;
             // 
             // hool_teen_page
             // 
+            hool_teen_page.Controls.Add(mehk_com);
+            hool_teen_page.Controls.Add(mehaan_lbl);
             hool_teen_page.Controls.Add(status_lbl);
             hool_teen_page.Controls.Add(status_com);
             hool_teen_page.Controls.Add(label2);
             hool_teen_page.Controls.Add(time_txt_box);
             hool_teen_page.Controls.Add(kuup_txt_box);
             hool_teen_page.Controls.Add(otsi_reg_txt_box);
+            hool_teen_page.Controls.Add(aeg_txt_box);
             hool_teen_page.Controls.Add(otsi_reg_lbl);
             hool_teen_page.Controls.Add(auto_lbl);
-            hool_teen_page.Controls.Add(aeg_txt_box);
             hool_teen_page.Controls.Add(auto_com_box);
             hool_teen_page.Controls.Add(teenus_com_box);
             hool_teen_page.Controls.Add(mileeg_lbl);
@@ -351,415 +163,279 @@
             hool_teen_page.Controls.Add(teenus_lbl);
             hool_teen_page.Controls.Add(hooldus_kir_lbl);
             hool_teen_page.Controls.Add(hooldus_data);
-            hool_teen_page.Location = new Point(4, 29);
-            hool_teen_page.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(hool_teen_page, "hool_teen_page");
             hool_teen_page.Name = "hool_teen_page";
-            hool_teen_page.Padding = new Padding(3, 4, 3, 4);
-            hool_teen_page.Size = new Size(747, 557);
-            hool_teen_page.TabIndex = 2;
-            hool_teen_page.Text = "Hooldus ja Teenused";
             hool_teen_page.UseVisualStyleBackColor = true;
+            // 
+            // mehk_com
+            // 
+            mehk_com.FormattingEnabled = true;
+            resources.ApplyResources(mehk_com, "mehk_com");
+            mehk_com.Name = "mehk_com";
+            // 
+            // mehaan_lbl
+            // 
+            resources.ApplyResources(mehaan_lbl, "mehaan_lbl");
+            mehaan_lbl.Name = "mehaan_lbl";
+            mehaan_lbl.Click += mehaan_lbl_Click;
             // 
             // status_lbl
             // 
-            status_lbl.AutoSize = true;
-            status_lbl.Location = new Point(21, 181);
+            resources.ApplyResources(status_lbl, "status_lbl");
             status_lbl.Name = "status_lbl";
-            status_lbl.Size = new Size(57, 20);
-            status_lbl.TabIndex = 25;
-            status_lbl.Text = "Staatus";
             // 
             // status_com
             // 
             status_com.FormattingEnabled = true;
-            status_com.Location = new Point(294, 173);
-            status_com.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(status_com, "status_com");
             status_com.Name = "status_com";
-            status_com.Size = new Size(159, 28);
-            status_com.TabIndex = 24;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(21, 146);
+            resources.ApplyResources(label2, "label2");
             label2.Name = "label2";
-            label2.Size = new Size(91, 20);
-            label2.TabIndex = 23;
-            label2.Text = "Teenuse aeg";
             // 
             // time_txt_box
             // 
-            time_txt_box.CustomFormat = "HH : mm";
+            resources.ApplyResources(time_txt_box, "time_txt_box");
             time_txt_box.Format = DateTimePickerFormat.Custom;
-            time_txt_box.Location = new Point(294, 139);
-            time_txt_box.Margin = new Padding(3, 4, 3, 4);
             time_txt_box.Name = "time_txt_box";
             time_txt_box.ShowUpDown = true;
-            time_txt_box.Size = new Size(159, 27);
-            time_txt_box.TabIndex = 22;
             time_txt_box.Value = new DateTime(2025, 12, 11, 12, 0, 0, 0);
             // 
             // kuup_txt_box
             // 
-            kuup_txt_box.Location = new Point(294, 104);
-            kuup_txt_box.Margin = new Padding(3, 4, 3, 4);
-            kuup_txt_box.MinDate = new DateTime(2025, 12, 11, 13, 15, 38, 541);
+            resources.ApplyResources(kuup_txt_box, "kuup_txt_box");
+            kuup_txt_box.Format = DateTimePickerFormat.Custom;
+            kuup_txt_box.MinDate = new DateTime(2025, 12, 16, 13, 15, 0, 0);
             kuup_txt_box.Name = "kuup_txt_box";
-            kuup_txt_box.Size = new Size(159, 27);
-            kuup_txt_box.TabIndex = 21;
-            kuup_txt_box.Value = new DateTime(2025, 12, 15, 0, 0, 0, 0);
+            kuup_txt_box.Value = new DateTime(2025, 12, 16, 13, 15, 0, 0);
             // 
             // otsi_reg_txt_box
             // 
-            otsi_reg_txt_box.Location = new Point(546, 61);
-            otsi_reg_txt_box.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(otsi_reg_txt_box, "otsi_reg_txt_box");
             otsi_reg_txt_box.Name = "otsi_reg_txt_box";
-            otsi_reg_txt_box.Size = new Size(159, 27);
-            otsi_reg_txt_box.TabIndex = 20;
             otsi_reg_txt_box.TextChanged += otsi_reg_txt_box_TextChanged;
-            // 
-            // otsi_reg_lbl
-            // 
-            otsi_reg_lbl.AutoSize = true;
-            otsi_reg_lbl.Location = new Point(546, 23);
-            otsi_reg_lbl.Name = "otsi_reg_lbl";
-            otsi_reg_lbl.Size = new Size(159, 20);
-            otsi_reg_lbl.TabIndex = 19;
-            otsi_reg_lbl.Text = "Otsida regnumbri järgi";
-            // 
-            // auto_lbl
-            // 
-            auto_lbl.AutoSize = true;
-            auto_lbl.Location = new Point(21, 37);
-            auto_lbl.Name = "auto_lbl";
-            auto_lbl.Size = new Size(41, 20);
-            auto_lbl.TabIndex = 15;
-            auto_lbl.Text = "Auto";
             // 
             // aeg_txt_box
             // 
-            aeg_txt_box.Location = new Point(294, 211);
-            aeg_txt_box.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(aeg_txt_box, "aeg_txt_box");
             aeg_txt_box.Name = "aeg_txt_box";
-            aeg_txt_box.Size = new Size(159, 27);
-            aeg_txt_box.TabIndex = 14;
+            // 
+            // otsi_reg_lbl
+            // 
+            resources.ApplyResources(otsi_reg_lbl, "otsi_reg_lbl");
+            otsi_reg_lbl.Name = "otsi_reg_lbl";
+            // 
+            // auto_lbl
+            // 
+            resources.ApplyResources(auto_lbl, "auto_lbl");
+            auto_lbl.Name = "auto_lbl";
             // 
             // auto_com_box
             // 
             auto_com_box.FormattingEnabled = true;
-            auto_com_box.Location = new Point(294, 29);
-            auto_com_box.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(auto_com_box, "auto_com_box");
             auto_com_box.Name = "auto_com_box";
-            auto_com_box.Size = new Size(159, 28);
-            auto_com_box.TabIndex = 13;
             // 
             // teenus_com_box
             // 
             teenus_com_box.FormattingEnabled = true;
-            teenus_com_box.Location = new Point(294, 65);
-            teenus_com_box.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(teenus_com_box, "teenus_com_box");
             teenus_com_box.Name = "teenus_com_box";
-            teenus_com_box.Size = new Size(159, 28);
-            teenus_com_box.TabIndex = 12;
             // 
             // mileeg_lbl
             // 
-            mileeg_lbl.AutoSize = true;
-            mileeg_lbl.Location = new Point(21, 211);
+            resources.ApplyResources(mileeg_lbl, "mileeg_lbl");
             mileeg_lbl.Name = "mileeg_lbl";
-            mileeg_lbl.Size = new Size(61, 20);
-            mileeg_lbl.TabIndex = 11;
-            mileeg_lbl.Text = "Läbisõit";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(21, 111);
+            resources.ApplyResources(label3, "label3");
             label3.Name = "label3";
-            label3.Size = new Size(121, 20);
-            label3.TabIndex = 10;
-            label3.Text = "Teenuse kuupäev";
             // 
             // teenus_lbl
             // 
-            teenus_lbl.AutoSize = true;
-            teenus_lbl.Location = new Point(21, 73);
+            resources.ApplyResources(teenus_lbl, "teenus_lbl");
             teenus_lbl.Name = "teenus_lbl";
-            teenus_lbl.Size = new Size(54, 20);
-            teenus_lbl.TabIndex = 9;
-            teenus_lbl.Text = "Teenus";
             // 
             // hooldus_kir_lbl
             // 
-            hooldus_kir_lbl.AutoSize = true;
-            hooldus_kir_lbl.Location = new Point(281, 0);
+            resources.ApplyResources(hooldus_kir_lbl, "hooldus_kir_lbl");
             hooldus_kir_lbl.Name = "hooldus_kir_lbl";
-            hooldus_kir_lbl.Size = new Size(114, 20);
-            hooldus_kir_lbl.TabIndex = 8;
-            hooldus_kir_lbl.Text = "Hoolduse kirjed";
             // 
             // hooldus_data
             // 
             hooldus_data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             hooldus_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            hooldus_data.Location = new Point(6, 267);
-            hooldus_data.Margin = new Padding(3, 4, 3, 4);
+            resources.ApplyResources(hooldus_data, "hooldus_data");
             hooldus_data.Name = "hooldus_data";
-            hooldus_data.RowHeadersWidth = 51;
-            hooldus_data.Size = new Size(735, 275);
-            hooldus_data.TabIndex = 2;
             hooldus_data.CellClick += hooldus_data_CellClick;
             // 
-            // tana_page
+            // auto_page
             // 
-            tana_page.Controls.Add(time_time);
-            tana_page.Controls.Add(ost_lbl);
-            tana_page.Controls.Add(mile_txt);
-            tana_page.Controls.Add(aeg_txt);
-            tana_page.Controls.Add(meh_com);
-            tana_page.Controls.Add(sts_com);
-            tana_page.Controls.Add(teen_com);
-            tana_page.Controls.Add(auto_com);
-            tana_page.Controls.Add(mil_lbl);
-            tana_page.Controls.Add(sts_lbl);
-            tana_page.Controls.Add(meh_lbl);
-            tana_page.Controls.Add(aeg_lbl);
-            tana_page.Controls.Add(serv);
-            tana_page.Controls.Add(auto);
-            tana_page.Controls.Add(tana_lbl);
-            tana_page.Controls.Add(tana_data);
-            tana_page.Location = new Point(4, 29);
-            tana_page.Name = "tana_page";
-            tana_page.Padding = new Padding(3);
-            tana_page.Size = new Size(747, 557);
-            tana_page.TabIndex = 3;
-            tana_page.Text = "Täna";
-            tana_page.UseVisualStyleBackColor = true;
+            auto_page.Controls.Add(label4);
+            auto_page.Controls.Add(otsi_regnum_txt_box);
+            auto_page.Controls.Add(auto_reg_num_text_box);
+            auto_page.Controls.Add(automudel_txt_box);
+            auto_page.Controls.Add(automark_text_box);
+            auto_page.Controls.Add(otsi_regnum_lbl);
+            auto_page.Controls.Add(omanik_lbl);
+            auto_page.Controls.Add(auto_reg_num_lbl);
+            auto_page.Controls.Add(automudel_lbl);
+            auto_page.Controls.Add(omanik_com_box);
+            auto_page.Controls.Add(automark_lbl);
+            auto_page.Controls.Add(autod_data);
+            resources.ApplyResources(auto_page, "auto_page");
+            auto_page.Name = "auto_page";
+            auto_page.UseVisualStyleBackColor = true;
             // 
-            // mile_txt
+            // label4
             // 
-            mile_txt.Location = new Point(419, 126);
-            mile_txt.Name = "mile_txt";
-            mile_txt.Size = new Size(144, 27);
-            mile_txt.TabIndex = 13;
+            resources.ApplyResources(label4, "label4");
+            label4.Name = "label4";
             // 
-            // aeg_txt
+            // otsi_regnum_txt_box
             // 
-            aeg_txt.CustomFormat = "HH : mm";
-            aeg_txt.DropDownAlign = LeftRightAlignment.Right;
-            aeg_txt.Format = DateTimePickerFormat.Custom;
-            aeg_txt.Location = new Point(159, 124);
-            aeg_txt.Name = "aeg_txt";
-            aeg_txt.ShowUpDown = true;
-            aeg_txt.Size = new Size(128, 27);
-            aeg_txt.TabIndex = 12;
-            aeg_txt.Value = new DateTime(2025, 12, 15, 12, 0, 0, 0);
+            resources.ApplyResources(otsi_regnum_txt_box, "otsi_regnum_txt_box");
+            otsi_regnum_txt_box.Name = "otsi_regnum_txt_box";
+            otsi_regnum_txt_box.TextChanged += otsi_regnum_txt_box_TextChanged;
             // 
-            // meh_com
+            // auto_reg_num_text_box
             // 
-            meh_com.FormattingEnabled = true;
-            meh_com.Location = new Point(419, 43);
-            meh_com.Name = "meh_com";
-            meh_com.Size = new Size(146, 28);
-            meh_com.TabIndex = 11;
+            resources.ApplyResources(auto_reg_num_text_box, "auto_reg_num_text_box");
+            auto_reg_num_text_box.Name = "auto_reg_num_text_box";
             // 
-            // sts_com
+            // automudel_txt_box
             // 
-            sts_com.FormattingEnabled = true;
-            sts_com.Location = new Point(419, 87);
-            sts_com.Name = "sts_com";
-            sts_com.Size = new Size(146, 28);
-            sts_com.TabIndex = 10;
+            resources.ApplyResources(automudel_txt_box, "automudel_txt_box");
+            automudel_txt_box.Name = "automudel_txt_box";
             // 
-            // teen_com
+            // automark_text_box
             // 
-            teen_com.FormattingEnabled = true;
-            teen_com.Location = new Point(131, 82);
-            teen_com.Name = "teen_com";
-            teen_com.Size = new Size(146, 28);
-            teen_com.TabIndex = 9;
+            resources.ApplyResources(automark_text_box, "automark_text_box");
+            automark_text_box.Name = "automark_text_box";
             // 
-            // auto_com
+            // otsi_regnum_lbl
             // 
-            auto_com.FormattingEnabled = true;
-            auto_com.Location = new Point(131, 39);
-            auto_com.Name = "auto_com";
-            auto_com.Size = new Size(146, 28);
-            auto_com.TabIndex = 8;
+            resources.ApplyResources(otsi_regnum_lbl, "otsi_regnum_lbl");
+            otsi_regnum_lbl.Name = "otsi_regnum_lbl";
             // 
-            // mil_lbl
+            // omanik_lbl
             // 
-            mil_lbl.AutoSize = true;
-            mil_lbl.Location = new Point(330, 124);
-            mil_lbl.Name = "mil_lbl";
-            mil_lbl.Size = new Size(61, 20);
-            mil_lbl.TabIndex = 7;
-            mil_lbl.Text = "Läbisõit";
+            resources.ApplyResources(omanik_lbl, "omanik_lbl");
+            omanik_lbl.Name = "omanik_lbl";
             // 
-            // sts_lbl
+            // auto_reg_num_lbl
             // 
-            sts_lbl.AutoSize = true;
-            sts_lbl.Location = new Point(330, 82);
-            sts_lbl.Name = "sts_lbl";
-            sts_lbl.Size = new Size(57, 20);
-            sts_lbl.TabIndex = 6;
-            sts_lbl.Text = "Staatus";
+            resources.ApplyResources(auto_reg_num_lbl, "auto_reg_num_lbl");
+            auto_reg_num_lbl.Name = "auto_reg_num_lbl";
             // 
-            // meh_lbl
+            // automudel_lbl
             // 
-            meh_lbl.AutoSize = true;
-            meh_lbl.Location = new Point(330, 43);
-            meh_lbl.Name = "meh_lbl";
-            meh_lbl.Size = new Size(73, 20);
-            meh_lbl.TabIndex = 5;
-            meh_lbl.Text = "Mehaanik";
+            resources.ApplyResources(automudel_lbl, "automudel_lbl");
+            automudel_lbl.Name = "automudel_lbl";
             // 
-            // aeg_lbl
+            // omanik_com_box
             // 
-            aeg_lbl.AutoSize = true;
-            aeg_lbl.Location = new Point(50, 129);
-            aeg_lbl.Name = "aeg_lbl";
-            aeg_lbl.Size = new Size(91, 20);
-            aeg_lbl.TabIndex = 4;
-            aeg_lbl.Text = "Teenuse aeg";
+            omanik_com_box.FormattingEnabled = true;
+            resources.ApplyResources(omanik_com_box, "omanik_com_box");
+            omanik_com_box.Name = "omanik_com_box";
             // 
-            // serv
+            // automark_lbl
             // 
-            serv.AutoSize = true;
-            serv.Location = new Point(50, 90);
-            serv.Name = "serv";
-            serv.Size = new Size(67, 20);
-            serv.TabIndex = 3;
-            serv.Text = "Teenuste";
+            resources.ApplyResources(automark_lbl, "automark_lbl");
+            automark_lbl.Name = "automark_lbl";
             // 
-            // auto
+            // autod_data
             // 
-            auto.AutoSize = true;
-            auto.Location = new Point(50, 43);
-            auto.Name = "auto";
-            auto.Size = new Size(41, 20);
-            auto.TabIndex = 2;
-            auto.Text = "Auto";
+            autod_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(autod_data, "autod_data");
+            autod_data.Name = "autod_data";
+            autod_data.CellClick += autod_data_CellClick;
             // 
-            // tana_lbl
+            // omanik_page
             // 
-            tana_lbl.AutoSize = true;
-            tana_lbl.Location = new Point(199, 12);
-            tana_lbl.Name = "tana_lbl";
-            tana_lbl.Size = new Size(40, 20);
-            tana_lbl.TabIndex = 1;
-            tana_lbl.Text = "Täna";
+            omanik_page.Controls.Add(label5);
+            omanik_page.Controls.Add(otsi_tel_txt_box);
+            omanik_page.Controls.Add(txt_box_phone);
+            omanik_page.Controls.Add(txt_box_full_name);
+            omanik_page.Controls.Add(otsi_tel_lbl);
+            omanik_page.Controls.Add(phone_lbl);
+            omanik_page.Controls.Add(label1);
+            omanik_page.Controls.Add(omanik_data);
+            omanik_page.Controls.Add(lbl_full_name);
+            resources.ApplyResources(omanik_page, "omanik_page");
+            omanik_page.Name = "omanik_page";
+            omanik_page.UseVisualStyleBackColor = true;
             // 
-            // tana_data
+            // label5
             // 
-            tana_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tana_data.Location = new Point(33, 213);
-            tana_data.Name = "tana_data";
-            tana_data.RowHeadersWidth = 51;
-            tana_data.Size = new Size(670, 315);
-            tana_data.TabIndex = 0;
-            tana_data.CellClick += tana_data_CellClick;
+            resources.ApplyResources(label5, "label5");
+            label5.BackColor = Color.White;
+            label5.Name = "label5";
             // 
-            // button1
+            // otsi_tel_txt_box
             // 
-            button1.Location = new Point(779, 333);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(121, 59);
-            button1.TabIndex = 17;
-            button1.Text = "Teenuste register";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += lisa_teenuste_btn_Click;
+            resources.ApplyResources(otsi_tel_txt_box, "otsi_tel_txt_box");
+            otsi_tel_txt_box.Name = "otsi_tel_txt_box";
+            otsi_tel_txt_box.TextChanged += otsi_tel_txt_box_TextChanged;
             // 
-            // lisa_btn
+            // txt_box_phone
             // 
-            lisa_btn.Location = new Point(776, 132);
-            lisa_btn.Margin = new Padding(3, 4, 3, 4);
-            lisa_btn.Name = "lisa_btn";
-            lisa_btn.Size = new Size(122, 59);
-            lisa_btn.TabIndex = 2;
-            lisa_btn.Text = "Lisa";
-            lisa_btn.UseVisualStyleBackColor = true;
-            lisa_btn.Click += lisa_btn_Click;
+            resources.ApplyResources(txt_box_phone, "txt_box_phone");
+            txt_box_phone.Name = "txt_box_phone";
             // 
-            // kust__btn
+            // txt_box_full_name
             // 
-            kust__btn.Location = new Point(777, 199);
-            kust__btn.Margin = new Padding(3, 4, 3, 4);
-            kust__btn.Name = "kust__btn";
-            kust__btn.Size = new Size(122, 59);
-            kust__btn.TabIndex = 1;
-            kust__btn.Text = "Kustuta";
-            kust__btn.UseVisualStyleBackColor = true;
-            kust__btn.Click += kust__btn_Click;
+            resources.ApplyResources(txt_box_full_name, "txt_box_full_name");
+            txt_box_full_name.Name = "txt_box_full_name";
             // 
-            // uuenda_btn
+            // otsi_tel_lbl
             // 
-            uuenda_btn.Location = new Point(778, 266);
-            uuenda_btn.Margin = new Padding(3, 4, 3, 4);
-            uuenda_btn.Name = "uuenda_btn";
-            uuenda_btn.Size = new Size(122, 59);
-            uuenda_btn.TabIndex = 3;
-            uuenda_btn.Text = "Uuenda";
-            uuenda_btn.UseVisualStyleBackColor = true;
-            uuenda_btn.Click += uuenda_btn_Click;
+            resources.ApplyResources(otsi_tel_lbl, "otsi_tel_lbl");
+            otsi_tel_lbl.BackColor = Color.White;
+            otsi_tel_lbl.Name = "otsi_tel_lbl";
             // 
-            // keel_com_box
+            // phone_lbl
             // 
-            keel_com_box.FormattingEnabled = true;
-            keel_com_box.Location = new Point(776, 4);
-            keel_com_box.Name = "keel_com_box";
-            keel_com_box.Size = new Size(133, 28);
-            keel_com_box.TabIndex = 10;
+            resources.ApplyResources(phone_lbl, "phone_lbl");
+            phone_lbl.BackColor = Color.White;
+            phone_lbl.Name = "phone_lbl";
             // 
-            // mehaanik_btn
+            // label1
             // 
-            mehaanik_btn.Location = new Point(779, 400);
-            mehaanik_btn.Margin = new Padding(3, 4, 3, 4);
-            mehaanik_btn.Name = "mehaanik_btn";
-            mehaanik_btn.Size = new Size(119, 59);
-            mehaanik_btn.TabIndex = 18;
-            mehaanik_btn.Text = "Mehaanik";
-            mehaanik_btn.UseVisualStyleBackColor = true;
-            mehaanik_btn.Click += mehaanik_btn_Click;
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
             // 
-            // vaata_btn
+            // omanik_data
             // 
-            vaata_btn.Location = new Point(778, 65);
-            vaata_btn.Margin = new Padding(3, 4, 3, 4);
-            vaata_btn.Name = "vaata_btn";
-            vaata_btn.Size = new Size(122, 59);
-            vaata_btn.TabIndex = 19;
-            vaata_btn.Text = "Vaata kõik";
-            vaata_btn.UseVisualStyleBackColor = true;
-            vaata_btn.Click += vaata_btn_Click;
+            omanik_data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            omanik_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(omanik_data, "omanik_data");
+            omanik_data.Name = "omanik_data";
+            omanik_data.CellClick += omanik_data_CellClick;
             // 
-            // ost_lbl
+            // lbl_full_name
             // 
-            ost_lbl.AutoSize = true;
-            ost_lbl.Location = new Point(610, 39);
-            ost_lbl.Name = "ost_lbl";
-            ost_lbl.Size = new Size(93, 20);
-            ost_lbl.TabIndex = 14;
-            ost_lbl.Text = "Otsi aja järgi";
+            resources.ApplyResources(lbl_full_name, "lbl_full_name");
+            lbl_full_name.BackColor = Color.White;
+            lbl_full_name.Name = "lbl_full_name";
             // 
-            // time_time
+            // tab_control
             // 
-            time_time.CustomFormat = "HH : mm";
-            time_time.DropDownAlign = LeftRightAlignment.Right;
-            time_time.Format = DateTimePickerFormat.Custom;
-            time_time.Location = new Point(610, 75);
-            time_time.Name = "time_time";
-            time_time.ShowUpDown = true;
-            time_time.Size = new Size(128, 27);
-            time_time.TabIndex = 15;
-            time_time.Value = new DateTime(2025, 12, 15, 12, 0, 0, 0);
+            tab_control.Controls.Add(omanik_page);
+            tab_control.Controls.Add(auto_page);
+            tab_control.Controls.Add(hool_teen_page);
+            resources.ApplyResources(tab_control, "tab_control");
+            tab_control.Name = "tab_control";
+            tab_control.SelectedIndex = 0;
+            tab_control.Click += tab_control_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(912, 624);
             Controls.Add(vaata_btn);
             Controls.Add(mehaanik_btn);
             Controls.Add(keel_com_box);
@@ -768,90 +444,71 @@
             Controls.Add(kust__btn);
             Controls.Add(button1);
             Controls.Add(lisa_btn);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
-            Text = "Form1";
             Load += Form1_Load;
-            tab_control.ResumeLayout(false);
-            omanik_page.ResumeLayout(false);
-            omanik_page.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)omanik_data).EndInit();
-            auto_page.ResumeLayout(false);
-            auto_page.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)autod_data).EndInit();
             hool_teen_page.ResumeLayout(false);
             hool_teen_page.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)hooldus_data).EndInit();
-            tana_page.ResumeLayout(false);
-            tana_page.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)tana_data).EndInit();
+            auto_page.ResumeLayout(false);
+            auto_page.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)autod_data).EndInit();
+            omanik_page.ResumeLayout(false);
+            omanik_page.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)omanik_data).EndInit();
+            tab_control.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private TabControl tab_control;
-        private TabPage omanik_page;
-        private TabPage auto_page;
-        private TabPage hool_teen_page;
         private Button lisa_btn;
         private Button kust__btn;
-        private DataGridView omanik_data;
-        private Label label1;
-        private Label lbl_full_name;
-        private TextBox txt_box_full_name;
-        private TextBox txt_box_phone;
-        private Label phone_lbl;
-        private Label automudel_lbl;
-        private ComboBox omanik_com_box;
-        private Label automark_lbl;
-        private DataGridView autod_data;
-        private Label omanik_lbl;
-        private Label auto_reg_num_lbl;
-        private TextBox auto_reg_num_text_box;
-        private TextBox automudel_txt_box;
-        private TextBox automark_text_box;
-        private DataGridView hooldus_data;
-        private Label hooldus_kir_lbl;
+        private Button uuenda_btn;
+        private Button button1;
+        private ComboBox keel_com_box;
+        private Button mehaanik_btn;
+        private Button vaata_btn;
+        private TabPage hool_teen_page;
+        private ComboBox mehk_com;
+        private Label mehaan_lbl;
+        private Label status_lbl;
+        private ComboBox status_com;
+        private Label label2;
+        private DateTimePicker time_txt_box;
+        private DateTimePicker kuup_txt_box;
+        private TextBox otsi_reg_txt_box;
         private TextBox aeg_txt_box;
+        private Label otsi_reg_lbl;
+        private Label auto_lbl;
         private ComboBox auto_com_box;
         private ComboBox teenus_com_box;
         private Label mileeg_lbl;
         private Label label3;
         private Label teenus_lbl;
-        private Label auto_lbl;
-        private Button uuenda_btn;
-        private Button button1;
-        private ComboBox keel_com_box;
-        private TextBox otsi_tel_txt_box;
-        private Label otsi_tel_lbl;
-        private Label otsi_regnum_lbl;
+        private Label hooldus_kir_lbl;
+        private DataGridView hooldus_data;
+        private TabPage auto_page;
         private TextBox otsi_regnum_txt_box;
-        private Label otsi_reg_lbl;
-        private TextBox otsi_reg_txt_box;
-        private Label label2;
-        private DateTimePicker time_txt_box;
-        private DateTimePicker kuup_txt_box;
-        private Button mehaanik_btn;
-        private TabPage tana_page;
-        private Button vaata_btn;
-        private Label status_lbl;
-        private ComboBox status_com;
-        private DataGridView tana_data;
-        private Label tana_lbl;
-        private Label aeg_lbl;
-        private Label serv;
-        private Label auto;
-        private Label mil_lbl;
-        private Label sts_lbl;
-        private Label meh_lbl;
-        private TextBox mile_txt;
-        private DateTimePicker aeg_txt;
-        private ComboBox meh_com;
-        private ComboBox sts_com;
-        private ComboBox teen_com;
-        private ComboBox auto_com;
-        private DateTimePicker time_time;
-        private Label ost_lbl;
+        private TextBox auto_reg_num_text_box;
+        private TextBox automudel_txt_box;
+        private TextBox automark_text_box;
+        private Label otsi_regnum_lbl;
+        private Label omanik_lbl;
+        private Label auto_reg_num_lbl;
+        private Label automudel_lbl;
+        private ComboBox omanik_com_box;
+        private Label automark_lbl;
+        private DataGridView autod_data;
+        private TabPage omanik_page;
+        private TextBox otsi_tel_txt_box;
+        private TextBox txt_box_phone;
+        private TextBox txt_box_full_name;
+        private Label otsi_tel_lbl;
+        private Label phone_lbl;
+        private Label label1;
+        private DataGridView omanik_data;
+        private Label lbl_full_name;
+        private TabControl tab_control;
+        private Label label4;
+        private Label label5;
     }
 }

@@ -163,37 +163,8 @@ namespace Cars
 
             }
         }
-        bool _keelLaetud;
         private void Teenuste_Load(object sender, EventArgs e)
         {
-            _keelLaetud = false;
-
-            keel_com.Items.Clear();
-            keel_com.Items.Add("Eesti");
-            keel_com.Items.Add("English");
-            string savedLangCode = Properties.Settings.Default.UserLanguage;
-            string displayLanguage = "Eesti";
-
-            if (savedLangCode == "en-US")
-            {
-                displayLanguage = "English";
-            }
-            else
-            {
-                displayLanguage = "Eesti";
-            }
-            keel_com.SelectedItem = displayLanguage;
-            _keelLaetud = true;
-        }
-        private void ChangeLanguage(string lang)
-        {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
-            var res = new ComponentResourceManager(typeof(Teenuste));
-            ApplyResourcesToControl(this, res);
-            res.ApplyResources(this, "$this");
-            Properties.Settings.Default.UserLanguage = lang;
-            Properties.Settings.Default.Save();
 
         }
         private void ApplyResourcesToControl(Control ctrl, ComponentResourceManager res)
@@ -202,20 +173,6 @@ namespace Cars
             foreach (Control child in ctrl.Controls)
             {
                 ApplyResourcesToControl(child, res);
-            }
-        }
-
-        private void keel_com_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!_keelLaetud)
-                return;
-            if (keel_com.SelectedItem?.ToString() == "English")
-            {
-                ChangeLanguage("en-US");
-            }
-            else
-            {
-                ChangeLanguage("et-EE");
             }
         }
     }

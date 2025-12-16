@@ -1,7 +1,9 @@
 using Cars.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
+using System.ComponentModel;
 using System.Data;
+using System.Globalization;
 using System.Runtime.Intrinsics.X86;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -25,7 +27,7 @@ namespace Cars
             LaeCars();
             LoeCarServices();
             LaeTeenused();
-            Tana();
+            Laemech();
             using (var db = new CarsContext())
             {
                 db.Database.EnsureCreated();
@@ -42,43 +44,19 @@ namespace Cars
             if (omanik_data.Columns["Id"] != null)
                 omanik_data.Columns["Id"].Visible = false;
         }
-        private void Tana()
-        {
-            tana_data.DataSource = _db.CarServices
-                .Include(cs => cs.Service)
-                .Include(cs => cs.Car)
-                .Select(cs => new
-                {
-                    Car = cs.Car.RegistrationNumber,
-                    cs.CarId,
-                    Service = cs.Service.Name,
-                    cs.ServiceId,
-                    cs.DateOfService,
-                    Mehaanik = cs.Mechanic.FullName,
-                    cs.MechanicId,
-                    cs.Status,
-                    cs.Mileage
-                })
-                .ToList();
-            if (tana_data.Columns["MechanicId"] != null)
-            {
-                tana_data.Columns["MechanicId"].Visible = false;
-            }
-            if (tana_data.Columns["CarId"] != null)
-            {
-                tana_data.Columns["CarId"].Visible = false;
-            }
-            if (tana_data.Columns["ServiceId"] != null)
-            {
-                tana_data.Columns["ServiceId"].Visible = false;
-            }
-        }
         private void LaeOmanik()
         {
             omanik_com_box.DataSource = _db.Owners.ToList();
             omanik_com_box.DisplayMember = "FullName";
             omanik_com_box.ValueMember = "Id";
             omanik_com_box.SelectedIndex = -1;
+        }
+        private void Laemech()
+        {
+            mehk_com.DataSource = _db.Mechanics.ToList();
+            mehk_com.DisplayMember = "FullName";
+            mehk_com.ValueMember = "Id";
+            mehk_com.SelectedIndex = -1;
         }
         private void LoeCar()
         {
@@ -100,8 +78,14 @@ namespace Cars
         }
         private void LaeCars()
         {
-            auto_com_box.DataSource = _db.Cars.ToList();
-            auto_com_box.DisplayMember = "RegistrationNumber";
+            auto_com_box.DataSource = _db.Cars
+                .Select(c => new
+                {
+                    c.Id,
+                    DisplayText = c.RegistrationNumber + " | " + c.Brand + " " + c.Model
+                })
+                .ToList();
+            auto_com_box.DisplayMember = "DisplayText";
             auto_com_box.ValueMember = "Id";
             auto_com_box.SelectedIndex = -1;
         }
@@ -216,7 +200,16 @@ namespace Cars
                     MessageBox.Show("Kuupäev või aeg või läbisõit on valesformaadis!");
                     return;
                 }
-
+                if (status_com.SelectedItem == null)
+                {
+                    MessageBox.Show("Valige staatus!");
+                    return;
+                }
+                if (mehk_com.SelectedItem == null)
+                {
+                    MessageBox.Show("Valige mehaanik");
+                    return;
+                }
                 var dateTimeOfService = new DateTime(
                     kuup.Year,
                     kuup.Month,
@@ -226,25 +219,32 @@ namespace Cars
                     0
                 );
 
-                var selectedServiceId = (int)teenus_com_box.SelectedValue;
+                int carId = (int)auto_com_box.SelectedValue;
+                int serviceId = (int)teenus_com_box.SelectedValue;
+                int mechanicId = (int)mehk_com.SelectedValue;
+
 
                 var dateExists = _db.CarServices.Any(cs =>
                     cs.DateOfService == dateTimeOfService &&
-                    cs.ServiceId == selectedServiceId);
+                    cs.ServiceId == serviceId &&
+                    cs.CarId == carId &&
+                    cs.MechanicId == mechanicId
+                );
 
                 if (dateExists)
                 {
-                    MessageBox.Show("Selle teenuse jaoks on see aeg juba kinni!");
+                    MessageBox.Show(
+                        "See auto on juba sellele teenusele, samale ajale ja sama mehaaniku juurde registreeritud!"
+                    );
                     return;
                 }
-
-
-
                 var uus2 = new CarService
                 {
                     CarId = (int)auto_com_box.SelectedValue,
                     ServiceId = (int)teenus_com_box.SelectedValue,
                     DateOfService = dateTimeOfService,
+                    MechanicId = (int)mehk_com.SelectedValue,
+                    Status = status_com.SelectedItem.ToString(),
                     Mileage = mileage
                 };
 
@@ -435,7 +435,10 @@ namespace Cars
                 teenus_com_box.SelectedIndex = -1;
                 kuup_txt_box.Value = DateTime.Now;
                 time_txt_box.Value = DateTime.Parse("12:00");
-
+                mehk_com.Text = "";
+                mehk_com.SelectedIndex = -1;
+                status_com.Text = "";
+                status_com.SelectedIndex = -1;
                 aeg_txt_box.Clear();
 
             }
@@ -619,24 +622,41 @@ namespace Cars
                     MessageBox.Show("Valige teenus!");
                     return;
                 }
-                if (!DateTime.TryParse(kuup_txt_box.Text, out DateTime newDate))
+                if (!DateTime.TryParse(kuup_txt_box.Text, out DateTime kuup) ||
+                    !DateTime.TryParse(time_txt_box.Text, out DateTime time) ||
+                    !int.TryParse(aeg_txt_box.Text, out int mileage))
                 {
-                    MessageBox.Show("Kuupäev on vales formaadis!");
+                    MessageBox.Show("Kuupäev või aeg või läbisõit on valesformaadis!");
                     return;
                 }
-                if (!int.TryParse(aeg_txt_box.Text, out int newMileage))
+                if (status_com.SelectedItem == null)
                 {
-                    MessageBox.Show("Läbisõit peab olema arv!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Valige staatus!");
                     return;
                 }
+                if (mehk_com.SelectedItem == null)
+                {
+                    MessageBox.Show("Valige mehaanik");
+                    return;
+                }
+                var dateTimeOfService = new DateTime(
+                    kuup.Year,
+                    kuup.Month,
+                    kuup.Day,
+                    time.Hour,
+                    time.Minute,
+                    0
+                );
                 _db.CarServices.Remove(oldEntry);
                 _db.SaveChanges();
                 var newEntry = new CarService
                 {
                     CarId = (int)auto_com_box.SelectedValue,
                     ServiceId = (int)teenus_com_box.SelectedValue,
-                    DateOfService = newDate,
-                    Mileage = newMileage
+                    DateOfService = dateTimeOfService,
+                    MechanicId = (int)mehk_com.SelectedValue,
+                    Status = status_com.SelectedItem.ToString(),
+                    Mileage = mileage,
                 };
                 _db.CarServices.Add(newEntry);
                 _db.SaveChanges();
@@ -647,12 +667,58 @@ namespace Cars
         private void lisa_teenuste_btn_Click(object sender, EventArgs e)
         {
             Teenuste hooldus_form = new Teenuste();
-            hooldus_form.Show();
+            hooldus_form.ShowDialog();
         }
+        bool _keelLaetud = false;
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            status_com.Items.Add("Valmis");
+            status_com.Items.Add("Ootel");
+            status_com.Items.Add("Teenindamisel");
+            status_com.SelectedIndex = 0;
 
+
+            _keelLaetud = false;
+
+            keel_com_box.Items.Clear();
+            keel_com_box.Items.Add("Eesti");
+            keel_com_box.Items.Add("English");
+
+            string lang = Properties.Settings.Default.UserLanguage;
+
+            if (lang == "en-US")
+                keel_com_box.SelectedItem = "English";
+            else
+                keel_com_box.SelectedItem = "Eesti";
+
+            _keelLaetud = true;
         }
+        private void ApplyResourcesToControl(Control ctrl, ComponentResourceManager res)
+        {
+            res.ApplyResources(ctrl, ctrl.Name);
+
+            foreach (Control child in ctrl.Controls)
+            {
+                ApplyResourcesToControl(child, res);
+            }
+        }
+        private void ChangeLanguage(string lang)
+        {
+            // Salvesta valik
+            Properties.Settings.Default.UserLanguage = lang;
+            Properties.Settings.Default.Save();
+
+            // Muuda kultuur
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
+
+            // Rakenda ressursid uuesti (sina juba kasutad seda meetodit)
+            var res = new ComponentResourceManager(typeof(Form1));
+            ApplyResourcesToControl(this, res);
+            res.ApplyResources(this, "$this");
+        }
+
         private void hooldus_data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -674,13 +740,30 @@ namespace Cars
                 {
                     teenus_com_box.SelectedIndex = -1;
                 }
+                if (row.Cells["MechanicId"].Value != null)
+                {
+                    mehk_com.SelectedValue = Convert.ToInt32(row.Cells["MechanicId"].Value);
+                }
+                else
+                {
+                    mehk_com.SelectedIndex = -1;
+                }
                 if (row.Cells["DateOfService"].Value != null)
                 {
                     kuup_txt_box.Value = Convert.ToDateTime(row.Cells["DateOfService"].Value);
+                    time_txt_box.Value = Convert.ToDateTime(row.Cells["DateOfService"].Value);
                 }
                 else
                 {
                     kuup_txt_box.Value = DateTime.Now;
+                }
+                if (row.Cells["Status"].Value != null)
+                {
+                    status_com.Text = row.Cells["Status"].Value?.ToString() ?? "";
+                }
+                else
+                {
+                    status_com.SelectedIndex = -1;
                 }
                 aeg_txt_box.Text = row.Cells["Mileage"].Value?.ToString() ?? "";
             }
@@ -751,6 +834,7 @@ namespace Cars
             LaeCars();
             LaeOmanik();
             LaeTeenused();
+            Laemech();
             puhasta();
         }
         private void otsi_regnum_txt_box_TextChanged(object sender, EventArgs e)
@@ -799,9 +883,8 @@ namespace Cars
         private void mehaanik_btn_Click(object sender, EventArgs e)
         {
             mehaanik mehaanik = new mehaanik();
-            mehaanik.Show();
+            mehaanik.ShowDialog();
         }
-
         private void vaata_btn_Click(object sender, EventArgs e)
         {
             if (tab_control.SelectedTab == omanik_page)
@@ -819,16 +902,26 @@ namespace Cars
                 LoeCarServices();
                 puhasta();
             }
-            else if (tab_control.SelectedTab == tana_page)
-            {
-
-                puhasta();
-            }
         }
-
         private void tana_data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void mehaan_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void keel_com_box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!_keelLaetud)
+                return;
+
+            if (keel_com_box.SelectedItem.ToString() == "English")
+                ChangeLanguage("en-US");
+            else
+                ChangeLanguage("et-EE");
         }
     }
 }

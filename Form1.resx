@@ -117,4 +117,1316 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>682, 250</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 44</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Teenuste register</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lisa_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>679, 99</value>
+  </data>
+  <data name="lisa_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 44</value>
+  </data>
+  <data name="lisa_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lisa_btn.Text" xml:space="preserve">
+    <value>Lisa</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.Name" xml:space="preserve">
+    <value>lisa_btn</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lisa_btn.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="kust__btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 149</value>
+  </data>
+  <data name="kust__btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 44</value>
+  </data>
+  <data name="kust__btn.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="kust__btn.Text" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="&gt;&gt;kust__btn.Name" xml:space="preserve">
+    <value>kust__btn</value>
+  </data>
+  <data name="&gt;&gt;kust__btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kust__btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;kust__btn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="uuenda_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>681, 200</value>
+  </data>
+  <data name="uuenda_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 44</value>
+  </data>
+  <data name="uuenda_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="uuenda_btn.Text" xml:space="preserve">
+    <value>Uuenda</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.Name" xml:space="preserve">
+    <value>uuenda_btn</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uuenda_btn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="keel_com_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>679, 3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="keel_com_box.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="keel_com_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <data name="keel_com_box.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;keel_com_box.Name" xml:space="preserve">
+    <value>keel_com_box</value>
+  </data>
+  <data name="&gt;&gt;keel_com_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;keel_com_box.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;keel_com_box.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="mehaanik_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>682, 300</value>
+  </data>
+  <data name="mehaanik_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 44</value>
+  </data>
+  <data name="mehaanik_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="mehaanik_btn.Text" xml:space="preserve">
+    <value>Mehaanik</value>
+  </data>
+  <data name="&gt;&gt;mehaanik_btn.Name" xml:space="preserve">
+    <value>mehaanik_btn</value>
+  </data>
+  <data name="&gt;&gt;mehaanik_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mehaanik_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mehaanik_btn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="vaata_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>681, 49</value>
+  </data>
+  <data name="vaata_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 44</value>
+  </data>
+  <data name="vaata_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="vaata_btn.Text" xml:space="preserve">
+    <value>Vaata kõik</value>
+  </data>
+  <data name="&gt;&gt;vaata_btn.Name" xml:space="preserve">
+    <value>vaata_btn</value>
+  </data>
+  <data name="&gt;&gt;vaata_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;vaata_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;vaata_btn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mehk_com.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 98</value>
+  </data>
+  <data name="mehk_com.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="mehk_com.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;mehk_com.Name" xml:space="preserve">
+    <value>mehk_com</value>
+  </data>
+  <data name="&gt;&gt;mehk_com.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mehk_com.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;mehk_com.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mehaan_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mehaan_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="mehaan_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 101</value>
+  </data>
+  <data name="mehaan_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 15</value>
+  </data>
+  <data name="mehaan_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="mehaan_lbl.Text" xml:space="preserve">
+    <value>Mehaanik</value>
+  </data>
+  <data name="&gt;&gt;mehaan_lbl.Name" xml:space="preserve">
+    <value>mehaan_lbl</value>
+  </data>
+  <data name="&gt;&gt;mehaan_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mehaan_lbl.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;mehaan_lbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="status_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="status_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="status_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 130</value>
+  </data>
+  <data name="status_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 15</value>
+  </data>
+  <data name="status_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="status_lbl.Text" xml:space="preserve">
+    <value>Staatus</value>
+  </data>
+  <data name="&gt;&gt;status_lbl.Name" xml:space="preserve">
+    <value>status_lbl</value>
+  </data>
+  <data name="&gt;&gt;status_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;status_lbl.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;status_lbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="status_com.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 127</value>
+  </data>
+  <data name="status_com.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="status_com.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;status_com.Name" xml:space="preserve">
+    <value>status_com</value>
+  </data>
+  <data name="&gt;&gt;status_com.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;status_com.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;status_com.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 72</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 15</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Teenuse aeg</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="time_txt_box.CustomFormat" xml:space="preserve">
+    <value>HH : mm</value>
+  </data>
+  <data name="time_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>424, 69</value>
+  </data>
+  <data name="time_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="time_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;time_txt_box.Name" xml:space="preserve">
+    <value>time_txt_box</value>
+  </data>
+  <data name="&gt;&gt;time_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;time_txt_box.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;time_txt_box.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="kuup_txt_box.CustomFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="kuup_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>424, 40</value>
+  </data>
+  <data name="kuup_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="kuup_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;kuup_txt_box.Name" xml:space="preserve">
+    <value>kuup_txt_box</value>
+  </data>
+  <data name="&gt;&gt;kuup_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kuup_txt_box.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;kuup_txt_box.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="otsi_reg_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 166</value>
+  </data>
+  <data name="otsi_reg_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="otsi_reg_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;otsi_reg_txt_box.Name" xml:space="preserve">
+    <value>otsi_reg_txt_box</value>
+  </data>
+  <data name="&gt;&gt;otsi_reg_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_reg_txt_box.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;otsi_reg_txt_box.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="aeg_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>424, 98</value>
+  </data>
+  <data name="aeg_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="aeg_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;aeg_txt_box.Name" xml:space="preserve">
+    <value>aeg_txt_box</value>
+  </data>
+  <data name="&gt;&gt;aeg_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aeg_txt_box.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;aeg_txt_box.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="otsi_reg_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="otsi_reg_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="otsi_reg_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 166</value>
+  </data>
+  <data name="otsi_reg_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 15</value>
+  </data>
+  <data name="otsi_reg_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="otsi_reg_lbl.Text" xml:space="preserve">
+    <value>Otsida regnumbri järgi</value>
+  </data>
+  <data name="&gt;&gt;otsi_reg_lbl.Name" xml:space="preserve">
+    <value>otsi_reg_lbl</value>
+  </data>
+  <data name="&gt;&gt;otsi_reg_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_reg_lbl.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;otsi_reg_lbl.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="auto_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="auto_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="auto_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 43</value>
+  </data>
+  <data name="auto_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 15</value>
+  </data>
+  <data name="auto_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="auto_lbl.Text" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="&gt;&gt;auto_lbl.Name" xml:space="preserve">
+    <value>auto_lbl</value>
+  </data>
+  <data name="&gt;&gt;auto_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;auto_lbl.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;auto_lbl.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="auto_com_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 40</value>
+  </data>
+  <data name="auto_com_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="auto_com_box.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;auto_com_box.Name" xml:space="preserve">
+    <value>auto_com_box</value>
+  </data>
+  <data name="&gt;&gt;auto_com_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;auto_com_box.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;auto_com_box.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="teenus_com_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 69</value>
+  </data>
+  <data name="teenus_com_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="teenus_com_box.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;teenus_com_box.Name" xml:space="preserve">
+    <value>teenus_com_box</value>
+  </data>
+  <data name="&gt;&gt;teenus_com_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;teenus_com_box.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;teenus_com_box.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="mileeg_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mileeg_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="mileeg_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 101</value>
+  </data>
+  <data name="mileeg_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 15</value>
+  </data>
+  <data name="mileeg_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="mileeg_lbl.Text" xml:space="preserve">
+    <value>Läbisõit</value>
+  </data>
+  <data name="&gt;&gt;mileeg_lbl.Name" xml:space="preserve">
+    <value>mileeg_lbl</value>
+  </data>
+  <data name="&gt;&gt;mileeg_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mileeg_lbl.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;mileeg_lbl.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 46</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 15</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Teenuse kuupäev</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="teenus_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="teenus_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="teenus_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 72</value>
+  </data>
+  <data name="teenus_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 15</value>
+  </data>
+  <data name="teenus_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="teenus_lbl.Text" xml:space="preserve">
+    <value>Teenus</value>
+  </data>
+  <data name="&gt;&gt;teenus_lbl.Name" xml:space="preserve">
+    <value>teenus_lbl</value>
+  </data>
+  <data name="&gt;&gt;teenus_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;teenus_lbl.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;teenus_lbl.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="hooldus_kir_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hooldus_kir_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Stencil, 14.25pt</value>
+  </data>
+  <data name="hooldus_kir_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 10</value>
+  </data>
+  <data name="hooldus_kir_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="hooldus_kir_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="hooldus_kir_lbl.Text" xml:space="preserve">
+    <value>Hoolduse kirjed</value>
+  </data>
+  <data name="&gt;&gt;hooldus_kir_lbl.Name" xml:space="preserve">
+    <value>hooldus_kir_lbl</value>
+  </data>
+  <data name="&gt;&gt;hooldus_kir_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hooldus_kir_lbl.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;hooldus_kir_lbl.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="hooldus_data.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 199</value>
+  </data>
+  <data name="hooldus_data.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="hooldus_data.Size" type="System.Drawing.Size, System.Drawing">
+    <value>643, 207</value>
+  </data>
+  <data name="hooldus_data.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;hooldus_data.Name" xml:space="preserve">
+    <value>hooldus_data</value>
+  </data>
+  <data name="&gt;&gt;hooldus_data.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hooldus_data.Parent" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;hooldus_data.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="hool_teen_page.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="hool_teen_page.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="hool_teen_page.Size" type="System.Drawing.Size, System.Drawing">
+    <value>653, 414</value>
+  </data>
+  <data name="hool_teen_page.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="hool_teen_page.Text" xml:space="preserve">
+    <value>Hooldus ja Teenused</value>
+  </data>
+  <data name="&gt;&gt;hool_teen_page.Name" xml:space="preserve">
+    <value>hool_teen_page</value>
+  </data>
+  <data name="&gt;&gt;hool_teen_page.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hool_teen_page.Parent" xml:space="preserve">
+    <value>tab_control</value>
+  </data>
+  <data name="&gt;&gt;hool_teen_page.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Stencil, 14.25pt</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 15</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 22</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="otsi_regnum_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 228</value>
+  </data>
+  <data name="otsi_regnum_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 23</value>
+  </data>
+  <data name="otsi_regnum_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;otsi_regnum_txt_box.Name" xml:space="preserve">
+    <value>otsi_regnum_txt_box</value>
+  </data>
+  <data name="&gt;&gt;otsi_regnum_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_regnum_txt_box.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;otsi_regnum_txt_box.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="auto_reg_num_text_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>519, 115</value>
+  </data>
+  <data name="auto_reg_num_text_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <data name="auto_reg_num_text_box.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;auto_reg_num_text_box.Name" xml:space="preserve">
+    <value>auto_reg_num_text_box</value>
+  </data>
+  <data name="&gt;&gt;auto_reg_num_text_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;auto_reg_num_text_box.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;auto_reg_num_text_box.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="automudel_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>519, 77</value>
+  </data>
+  <data name="automudel_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <data name="automudel_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;automudel_txt_box.Name" xml:space="preserve">
+    <value>automudel_txt_box</value>
+  </data>
+  <data name="&gt;&gt;automudel_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;automudel_txt_box.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;automudel_txt_box.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="automark_text_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>519, 38</value>
+  </data>
+  <data name="automark_text_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <data name="automark_text_box.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;automark_text_box.Name" xml:space="preserve">
+    <value>automark_text_box</value>
+  </data>
+  <data name="&gt;&gt;automark_text_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;automark_text_box.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;automark_text_box.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="otsi_regnum_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="otsi_regnum_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="otsi_regnum_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 206</value>
+  </data>
+  <data name="otsi_regnum_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 15</value>
+  </data>
+  <data name="otsi_regnum_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="otsi_regnum_lbl.Text" xml:space="preserve">
+    <value>Otsida regnumbri järgi</value>
+  </data>
+  <data name="&gt;&gt;otsi_regnum_lbl.Name" xml:space="preserve">
+    <value>otsi_regnum_lbl</value>
+  </data>
+  <data name="&gt;&gt;otsi_regnum_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_regnum_lbl.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;otsi_regnum_lbl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="omanik_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="omanik_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="omanik_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 153</value>
+  </data>
+  <data name="omanik_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 15</value>
+  </data>
+  <data name="omanik_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="omanik_lbl.Text" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;omanik_lbl.Name" xml:space="preserve">
+    <value>omanik_lbl</value>
+  </data>
+  <data name="&gt;&gt;omanik_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;omanik_lbl.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;omanik_lbl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="auto_reg_num_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="auto_reg_num_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="auto_reg_num_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 118</value>
+  </data>
+  <data name="auto_reg_num_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 15</value>
+  </data>
+  <data name="auto_reg_num_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="auto_reg_num_lbl.Text" xml:space="preserve">
+    <value>Regnumber</value>
+  </data>
+  <data name="&gt;&gt;auto_reg_num_lbl.Name" xml:space="preserve">
+    <value>auto_reg_num_lbl</value>
+  </data>
+  <data name="&gt;&gt;auto_reg_num_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;auto_reg_num_lbl.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;auto_reg_num_lbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="automudel_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="automudel_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="automudel_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 80</value>
+  </data>
+  <data name="automudel_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 15</value>
+  </data>
+  <data name="automudel_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="automudel_lbl.Text" xml:space="preserve">
+    <value>Automudel</value>
+  </data>
+  <data name="&gt;&gt;automudel_lbl.Name" xml:space="preserve">
+    <value>automudel_lbl</value>
+  </data>
+  <data name="&gt;&gt;automudel_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;automudel_lbl.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;automudel_lbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="omanik_com_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>519, 150</value>
+  </data>
+  <data name="omanik_com_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <data name="omanik_com_box.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;omanik_com_box.Name" xml:space="preserve">
+    <value>omanik_com_box</value>
+  </data>
+  <data name="&gt;&gt;omanik_com_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;omanik_com_box.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;omanik_com_box.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="automark_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="automark_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="automark_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 41</value>
+  </data>
+  <data name="automark_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 15</value>
+  </data>
+  <data name="automark_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="automark_lbl.Text" xml:space="preserve">
+    <value>Automark</value>
+  </data>
+  <data name="&gt;&gt;automark_lbl.Name" xml:space="preserve">
+    <value>automark_lbl</value>
+  </data>
+  <data name="&gt;&gt;automark_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;automark_lbl.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;automark_lbl.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="autod_data.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 41</value>
+  </data>
+  <data name="autod_data.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="autod_data.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 346</value>
+  </data>
+  <data name="autod_data.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;autod_data.Name" xml:space="preserve">
+    <value>autod_data</value>
+  </data>
+  <data name="&gt;&gt;autod_data.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;autod_data.Parent" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;autod_data.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="auto_page.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="auto_page.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="auto_page.Size" type="System.Drawing.Size, System.Drawing">
+    <value>653, 414</value>
+  </data>
+  <data name="auto_page.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="auto_page.Text" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;auto_page.Name" xml:space="preserve">
+    <value>auto_page</value>
+  </data>
+  <data name="&gt;&gt;auto_page.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;auto_page.Parent" xml:space="preserve">
+    <value>tab_control</value>
+  </data>
+  <data name="&gt;&gt;auto_page.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Stencil, 14.25pt</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 15</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 22</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Omanikud</value>
+  </data>
+  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="otsi_tel_txt_box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 187</value>
+  </data>
+  <data name="otsi_tel_txt_box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="otsi_tel_txt_box.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;otsi_tel_txt_box.Name" xml:space="preserve">
+    <value>otsi_tel_txt_box</value>
+  </data>
+  <data name="&gt;&gt;otsi_tel_txt_box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_tel_txt_box.Parent" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;otsi_tel_txt_box.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txt_box_phone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 127</value>
+  </data>
+  <data name="txt_box_phone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="txt_box_phone.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txt_box_phone.Name" xml:space="preserve">
+    <value>txt_box_phone</value>
+  </data>
+  <data name="&gt;&gt;txt_box_phone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_box_phone.Parent" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;txt_box_phone.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txt_box_full_name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 65</value>
+  </data>
+  <data name="txt_box_full_name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="txt_box_full_name.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txt_box_full_name.Name" xml:space="preserve">
+    <value>txt_box_full_name</value>
+  </data>
+  <data name="&gt;&gt;txt_box_full_name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_box_full_name.Parent" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;txt_box_full_name.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="otsi_tel_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="otsi_tel_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="otsi_tel_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 166</value>
+  </data>
+  <data name="otsi_tel_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 15</value>
+  </data>
+  <data name="otsi_tel_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="otsi_tel_lbl.Text" xml:space="preserve">
+    <value>Otsida telefoninumbri järgi
+</value>
+  </data>
+  <data name="otsi_tel_lbl.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;otsi_tel_lbl.Name" xml:space="preserve">
+    <value>otsi_tel_lbl</value>
+  </data>
+  <data name="&gt;&gt;otsi_tel_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_tel_lbl.Parent" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;otsi_tel_lbl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="phone_lbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="phone_lbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="phone_lbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 106</value>
+  </data>
+  <data name="phone_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 15</value>
+  </data>
+  <data name="phone_lbl.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="phone_lbl.Text" xml:space="preserve">
+    <value>Telefoninumber</value>
+  </data>
+  <data name="phone_lbl.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;phone_lbl.Name" xml:space="preserve">
+    <value>phone_lbl</value>
+  </data>
+  <data name="&gt;&gt;phone_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;phone_lbl.Parent" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;phone_lbl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>496, 27</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 15</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="omanik_data.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 46</value>
+  </data>
+  <data name="omanik_data.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="omanik_data.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 347</value>
+  </data>
+  <data name="omanik_data.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;omanik_data.Name" xml:space="preserve">
+    <value>omanik_data</value>
+  </data>
+  <data name="&gt;&gt;omanik_data.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;omanik_data.Parent" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;omanik_data.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbl_full_name.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_full_name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="lbl_full_name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 46</value>
+  </data>
+  <data name="lbl_full_name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 15</value>
+  </data>
+  <data name="lbl_full_name.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lbl_full_name.Text" xml:space="preserve">
+    <value>Ees- ja perekonnanimi</value>
+  </data>
+  <data name="lbl_full_name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lbl_full_name.Name" xml:space="preserve">
+    <value>lbl_full_name</value>
+  </data>
+  <data name="&gt;&gt;lbl_full_name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_full_name.Parent" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;lbl_full_name.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="omanik_page.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="omanik_page.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="omanik_page.Size" type="System.Drawing.Size, System.Drawing">
+    <value>653, 414</value>
+  </data>
+  <data name="omanik_page.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="omanik_page.Text" xml:space="preserve">
+    <value>Omanikud</value>
+  </data>
+  <data name="&gt;&gt;omanik_page.Name" xml:space="preserve">
+    <value>omanik_page</value>
+  </data>
+  <data name="&gt;&gt;omanik_page.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;omanik_page.Parent" xml:space="preserve">
+    <value>tab_control</value>
+  </data>
+  <data name="&gt;&gt;omanik_page.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tab_control.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 10</value>
+  </data>
+  <data name="tab_control.Size" type="System.Drawing.Size, System.Drawing">
+    <value>661, 442</value>
+  </data>
+  <data name="tab_control.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tab_control.Name" xml:space="preserve">
+    <value>tab_control</value>
+  </data>
+  <data name="&gt;&gt;tab_control.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab_control.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tab_control.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>798, 468</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
