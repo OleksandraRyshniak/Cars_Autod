@@ -37,7 +37,6 @@
             otsi_lbl = new Label();
             otsi_txt = new TextBox();
             meh_data = new DataGridView();
-            keel_com = new ComboBox();
             lisa_btn = new Button();
             koik_btn = new Button();
             uuenda_btn = new Button();
@@ -83,46 +82,40 @@
             // 
             // meh_data
             // 
-            resources.ApplyResources(meh_data, "meh_data");
-            meh_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             meh_data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            meh_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(meh_data, "meh_data");
             meh_data.Name = "meh_data";
             meh_data.CellClick += meh_data_CellClick;
             // 
-            // keel_com
-            // 
-            resources.ApplyResources(keel_com, "keel_com");
-            keel_com.FormattingEnabled = true;
-            keel_com.Name = "keel_com";
-            // 
             // lisa_btn
             // 
-            resources.ApplyResources(lisa_btn, "lisa_btn");
             lisa_btn.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(lisa_btn, "lisa_btn");
             lisa_btn.Name = "lisa_btn";
             lisa_btn.UseVisualStyleBackColor = false;
             lisa_btn.Click += lisa_btn_Click;
             // 
             // koik_btn
             // 
-            resources.ApplyResources(koik_btn, "koik_btn");
             koik_btn.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(koik_btn, "koik_btn");
             koik_btn.Name = "koik_btn";
             koik_btn.UseVisualStyleBackColor = false;
             koik_btn.Click += koik_btn_Click;
             // 
             // uuenda_btn
             // 
-            resources.ApplyResources(uuenda_btn, "uuenda_btn");
             uuenda_btn.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(uuenda_btn, "uuenda_btn");
             uuenda_btn.Name = "uuenda_btn";
             uuenda_btn.UseVisualStyleBackColor = false;
             uuenda_btn.Click += uuenda_btn_Click;
             // 
             // kust_btn
             // 
-            resources.ApplyResources(kust_btn, "kust_btn");
             kust_btn.BackColor = Color.LightSteelBlue;
+            resources.ApplyResources(kust_btn, "kust_btn");
             kust_btn.Name = "kust_btn";
             kust_btn.UseVisualStyleBackColor = false;
             kust_btn.Click += kust_btn_Click;
@@ -135,7 +128,6 @@
             Controls.Add(uuenda_btn);
             Controls.Add(koik_btn);
             Controls.Add(lisa_btn);
-            Controls.Add(keel_com);
             Controls.Add(meh_data);
             Controls.Add(otsi_txt);
             Controls.Add(otsi_lbl);
@@ -161,7 +153,6 @@
         private Label otsi_lbl;
         private TextBox otsi_txt;
         private DataGridView meh_data;
-        private ComboBox keel_com;
         private Button lisa_btn;
         private Button koik_btn;
         private Button uuenda_btn;
